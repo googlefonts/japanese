@@ -6,18 +6,24 @@ import Swipeable from 'react-swipeable';
 class SidebarArrow extends React.Component {
   render () {
     const self = this;
-    var className = 'py2 speak-none'
+    var className = 'pb2 speak-none select-none';
 
     if (self.props.visible === false) {
-      className += ' hide'
+      className += ' hide';
     }
 
     return (
       <div className={ className } aria-label="hidden">
         <span className="inline-block" style={{
           transform: 'rotate(' + self.props.deg + 'deg)',
-          transition: 'transform 0.66s 0.3s ease-in-out'
-        }}>⬆</span>
+          transition: 'transform 0.5s 0.15s ease-in-out'
+        }}>
+          {/* Apache 2.0 via https://design.google.com/icons/#ic_arrow_forward */}
+          <svg height="24" viewBox="0 0 24 24" width="24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="inherit" />
+          </svg>
+        </span>
       </div>
     );
   }
@@ -25,7 +31,7 @@ class SidebarArrow extends React.Component {
 
 SidebarArrow.defaultProps = {
   visible: false,
-  deg: 90
+  deg: 0
 }
 
 class SidebarColophon extends React.Component {
@@ -100,10 +106,10 @@ class SidebarColophon extends React.Component {
                 onSwipedRight={self.props.onSwipedRight}>
               <div className="right col-12 md-col-12 ds-sidebar md-ds-none">
                 <div className={'h5 md-h4 animate-bg bg-' + self.props.backgroundColor} style={{height: 100 + 'vh'}}>
-                <div className={'p2 md-p3 animate-bg transition-color transition-sidebar ' + (self.props.backgroundColor === 'white' ? 'bg-white' : 'bg-lighten-3') + ' ' + ((self.props.backgroundColor === 'black' || self.props.backgroundColor === 'gray') ? 'white' : '')}
+                <div className={'p2 md-p3 animate-bg transition-color transition-sidebar ' + (self.props.backgroundColor === 'white' ? 'bg-white' : 'bg-lighten-3') + ' ' + ((self.props.backgroundColor === 'black' || self.props.backgroundColor === 'gray') ? 'white fill-white' : '')}
                      style={{minHeight: 100 + 'vh'}}>
 
-                  <SidebarArrow visible={!sidebarLargeScreen} deg={self.props.show ? 270 : -270} />
+                  <SidebarArrow visible={!sidebarLargeScreen} deg={self.props.show ? 540 : 0} />
 
                   <h3 className="border-top pt2 onum pnum inline-block mt0 font-weight-600">{fontNameHeading}{fontNameEn}</h3>
 

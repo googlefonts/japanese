@@ -73,7 +73,7 @@
 }
 
 .transition-color {
-  transition: color 0.33s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition: color 0.33s cubic-bezier(0.17, 0.67, 0.83, 0.67), fill 0.33s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 .transition-sidebar {
