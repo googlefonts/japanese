@@ -3,6 +3,31 @@ import {StickyContainer, Sticky} from 'react-sticky';
 import CodeBlock from '../components/CodeBlock';
 import Swipeable from 'react-swipeable';
 
+class SidebarArrow extends React.Component {
+  render () {
+    const self = this;
+    var className = 'py2 speak-none'
+
+    if (self.props.visible === false) {
+      className += ' hide'
+    }
+
+    return (
+      <div className={ className } aria-label="hidden">
+        <span className="inline-block" style={{
+          transform: 'rotate(' + self.props.deg + 'deg)',
+          transition: 'transform 0.66s 0.3s ease-in-out'
+        }}>⬆</span>
+      </div>
+    );
+  }
+}
+
+SidebarArrow.defaultProps = {
+  visible: false,
+  deg: 90
+}
+
 class SidebarColophon extends React.Component {
   render() {
     const self = this;
@@ -13,11 +38,12 @@ class SidebarColophon extends React.Component {
     var codeBlock = '';
     var sidebarStyles = {};
     var fontNameHeading = font.name.ja;
+    var sidebarLargeScreen = self.props.viewport.width > self.props.sidebarMaxWidth
 
     var fontNameEn = (font.name.ja === font.name.en) ? <span className="block speak-none">&nbsp;</span> : <span lang="en" className="block font-weight-400 muted">{font.name.en}</span>;
     var fontDesignerNameEn = (font.designer.name.ja === font.designer.name.en) ? '' : <span lang="en" className="muted"> {font.designer.name.en}</span>;
 
-    if (self.props.viewport.width > self.props.sidebarMaxWidth) {
+    if (sidebarLargeScreen) {
       sidebarStyles.left = 0;
     } else {
       sidebarStyles.left = (self.props.show ? 25 : 83.3333333) + '%';
@@ -76,6 +102,8 @@ class SidebarColophon extends React.Component {
                 <div className={'h5 md-h4 animate-bg bg-' + self.props.backgroundColor} style={{height: 100 + 'vh'}}>
                 <div className={'p2 md-p3 animate-bg transition-color transition-sidebar ' + (self.props.backgroundColor === 'white' ? 'bg-white' : 'bg-lighten-3') + ' ' + ((self.props.backgroundColor === 'black' || self.props.backgroundColor === 'gray') ? 'white' : '')}
                      style={{minHeight: 100 + 'vh'}}>
+
+                  <SidebarArrow visible={!sidebarLargeScreen} deg={self.props.show ? 270 : -270} />
 
                   <h3 className="border-top pt2 onum pnum inline-block mt0 font-weight-600">{fontNameHeading}{fontNameEn}</h3>
 
