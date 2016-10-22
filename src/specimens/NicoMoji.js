@@ -17,7 +17,7 @@ class SpecimenNicoMoji extends React.Component {
             <Keyframes loop={true}>
 
               <Frame duration={2500}><div className="red transition-color"><FitterHappierText text="ニコもじ" /></div></Frame>
-              <Frame duration={2500}><div className="green transition-color"><FitterHappierText text="カフェでコーヒ" /></div></Frame>
+              <Frame duration={2500}><div className="green transition-color"><FitterHappierText text="カフェでコーヒー" /></div></Frame>
               <Frame duration={2500}><div className="blue transition-color"><FitterHappierText text="おちゃにしますか" /></div></Frame>
               <Frame duration={2500}><div className="purple transition-color"><FitterHappierText text="いらっしゃいませ" /></div></Frame>
 
