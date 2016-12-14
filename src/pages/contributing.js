@@ -5,7 +5,7 @@ import content from '../../CONTRIBUTING.md';
 class Contributing extends React.Component {
   render() {
     const self = this;
-    const data = self.props.data;
+    // const data = self.props.data;
     const colors = ['fuchsia', 'maroon', 'red', 'yellow', 'green', 'olive', 'aqua', 'blue', 'navy', 'purple', 'black'];
 
     let colorGrid = colors.map((color) => {

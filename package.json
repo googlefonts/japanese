@@ -85,14 +85,18 @@
       "google"
     ],
     "rules": {
-      "max-len": [1, 120, 2]
+      "max-len": 0,
+      "require-jsdoc": 0
     },
     "env": {
       "browser": true
+    },
+    "globals": {
+      "require": true
     }
   },
   "scripts": {
-    "lint": "eslint ./src",
+    "lint": "eslint ./src --ignore-pattern /src/vendor/*",
     "test": "echo \"Error: no test specified.\" && exit 0",
     "posttest": "npm run lint",
     "build": "NODE_ENV=production webpack",

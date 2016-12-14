@@ -33,8 +33,6 @@ class SVGBackground extends React.Component {
     const eventPageY = e.pageY;
     const container = self._container;
 
-    console.log(e);
-
     self.setState({
       eventPageX: eventPageX,
       eventPageY: eventPageY,
@@ -45,10 +43,10 @@ class SVGBackground extends React.Component {
 
   handleOnTouchMove(e) {
     e.persist();
-    const self = this;
-    const touch = e.touches[0];
-    const eventPageX = touch.clientX;
-    const eventPageY = touch.clientY;
+    // const self = this;
+    // const touch = e.touches[0];
+    // const eventPageX = touch.clientX;
+    // const eventPageY = touch.clientY;
 
     // self.setState({
     //   eventPageX: eventPageX,
@@ -60,9 +58,9 @@ class SVGBackground extends React.Component {
 
   render() {
     const self = this;
-    const state = self.state;
-    const cx = state.eventPageX;
-    const cy = state.eventPageY;
+    // const state = self.state;
+    // const cx = state.eventPageX;
+    // const cy = state.eventPageY;
 
     return (
       <div className="overflow-y-hidden"

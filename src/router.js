@@ -28,12 +28,12 @@ export default Router.extend({
   home() {
     this.renderPage(<Index />);
   },
-  test() {
-    this.renderPage(<Test />);
-  },
-  contributing() {
-    this.renderPage(<Contributing />);
-  },
+  // test() {
+  //   this.renderPage(<Test />);
+  // },
+  // contributing() {
+  //   this.renderPage(<Contributing />);
+  // },
   fourOhFour() {
     this.renderPage(<FourOhFour />);
   },
