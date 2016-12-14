@@ -17,7 +17,7 @@ GlyphColumn.defaultProps = {
   fontWeight: 400,
   className: '',
   compressor: 1.0,
-  value: ''
+  value: '',
 };
 
 export default GlyphColumn;

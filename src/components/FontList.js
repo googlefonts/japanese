@@ -3,34 +3,34 @@ import _map from 'lodash.map';
 import FitText from '../vendor/react-fittext';
 
 class GlyphHidden extends React.Component {
-  render () {
+  render() {
     const self = this;
 
     return (
-      <span style={{ opacity: 0 }} className="speak-none" aria-hidden="true">{ self.props.text }</span>
+      <span style={{opacity: 0}} className="speak-none" aria-hidden="true">{ self.props.text }</span>
     );
   }
 }
 
 GlyphHidden.defaultProps = {
-  text: ''
+  text: '',
 };
 
 class FontList extends React.Component {
   render() {
     const self = this;
     const data = self.props.data;
-    var textAlign = self.props.textAlignment;
+    let textAlign = self.props.textAlignment;
 
     if (self.props.textAlignment === 'left' || self.props.textAlignment === 'right') {
       textAlign = self.props.textAlignment + '-align';
     }
 
-    var typefaceList = _map(Object.keys(data.fonts), function(index) {
-      var font = data.fonts[index];
-      var fontWeight = 400;
-      var fontString = <span><GlyphHidden text="安" />あア</span>;
-      var fontSizeAdjust = typeof font.font_size_adjust === 'undefined' ? 1 : (1 / font.font_size_adjust);
+    let typefaceList = _map(Object.keys(data.fonts), function(index) {
+      let font = data.fonts[index];
+      let fontWeight = 400;
+      let fontString = <span><GlyphHidden text="安" />あア</span>;
+      let fontSizeAdjust = typeof font.font_size_adjust === 'undefined' ? 1 : (1 / font.font_size_adjust);
 
       if (font.published !== false && font.designer) {
         if (font.hiragana === false) {
@@ -70,7 +70,7 @@ FontList.defaultProps = {
   maxFontSize: 120,
   minFontSize: 24,
   firstColumnLgCol: 5, // TODO This this a quick fix, could be much nicer. Fixes column width on footer
-  textAlignment: 'left'
+  textAlignment: 'left',
 };
 
 export default FontList;

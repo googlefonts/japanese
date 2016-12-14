@@ -42,7 +42,7 @@ class SpecimenRoundedMPlus extends React.Component {
 }
 
 SpecimenRoundedMPlus.defaultProps = {
-  data: {}
+  data: {},
 };
 
 export default SpecimenRoundedMPlus;

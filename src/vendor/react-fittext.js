@@ -10,9 +10,9 @@
  */
 'use strict';
 
-import React from 'react'
-import { findDOMNode } from 'react-dom'
-var ReactPropTypes = React.PropTypes;
+import React from 'react';
+import {findDOMNode} from 'react-dom';
+let ReactPropTypes = React.PropTypes;
 
 module.exports = React.createClass({
   displayName: 'ReactFitText',
@@ -21,29 +21,29 @@ module.exports = React.createClass({
     children: ReactPropTypes.element.isRequired,
     compressor: ReactPropTypes.number,
     minFontSize: ReactPropTypes.number,
-    maxFontSize: ReactPropTypes.number
+    maxFontSize: ReactPropTypes.number,
   },
 
   getDefaultProps: function() {
     return {
       compressor: 1.0,
       minFontSize: Number.NEGATIVE_INFINITY,
-      maxFontSize: Number.POSITIVE_INFINITY
+      maxFontSize: Number.POSITIVE_INFINITY,
     };
   },
 
   componentDidMount: function() {
-    window.addEventListener("resize", this._onBodyResize);
+    window.addEventListener('resize', this._onBodyResize);
     this._onBodyResize();
   },
 
   componentWillUnmount: function() {
-    window.removeEventListener("resize", this._onBodyResize);
+    window.removeEventListener('resize', this._onBodyResize);
   },
 
   _onBodyResize: function() {
-    var element = findDOMNode(this);
-    var width = element.offsetWidth;
+    let element = findDOMNode(this);
+    let width = element.offsetWidth;
     element.style.fontSize = Math.max(
                       Math.min((width / (this.props.compressor*10)),
                                 parseFloat(this.props.maxFontSize)),
@@ -52,5 +52,5 @@ module.exports = React.createClass({
 
   render: function() {
     return this.props.children;
-  }
+  },
 });

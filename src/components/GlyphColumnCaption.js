@@ -11,7 +11,7 @@ class GlyphColumnCaption extends React.Component {
 }
 
 GlyphColumnCaption.defaultProps = {
-  className: ''
+  className: '',
 };
 
 export default GlyphColumnCaption;

@@ -4,9 +4,9 @@ import CodeBlock from '../components/CodeBlock';
 import Swipeable from 'react-swipeable';
 
 class SidebarArrow extends React.Component {
-  render () {
+  render() {
     const self = this;
-    var className = 'pb2 speak-none select-none';
+    let className = 'pb2 speak-none select-none';
 
     if (self.props.visible === false) {
       className += ' hide';
@@ -16,7 +16,7 @@ class SidebarArrow extends React.Component {
       <div className={ className } aria-label="hidden">
         <span className="inline-block" style={{
           transform: 'rotate(' + self.props.deg + 'deg)',
-          transition: 'transform 0.5s 0.15s ease-in-out'
+          transition: 'transform 0.5s 0.15s ease-in-out',
         }}>
           {/* Apache 2.0 via https://design.google.com/icons/#ic_arrow_forward */}
           <svg height="24" viewBox="0 0 24 24" width="24">
@@ -31,23 +31,23 @@ class SidebarArrow extends React.Component {
 
 SidebarArrow.defaultProps = {
   visible: false,
-  deg: 0
-}
+  deg: 0,
+};
 
 class SidebarColophon extends React.Component {
   render() {
     const self = this;
-    var data = self.props.data;
-    var font = data.fonts[self.props.font];
-    var desc = '';
-    var quote = '';
-    var codeBlock = '';
-    var sidebarStyles = {};
-    var fontNameHeading = font.name.ja;
-    var sidebarLargeScreen = self.props.viewport.width > self.props.sidebarMaxWidth
+    let data = self.props.data;
+    let font = data.fonts[self.props.font];
+    let desc = '';
+    let quote = '';
+    let codeBlock = '';
+    let sidebarStyles = {};
+    let fontNameHeading = font.name.ja;
+    let sidebarLargeScreen = self.props.viewport.width > self.props.sidebarMaxWidth;
 
-    var fontNameEn = (font.name.ja === font.name.en) ? <span className="block speak-none">&nbsp;</span> : <span lang="en" className="block font-weight-400 muted">{font.name.en}</span>;
-    var fontDesignerNameEn = (font.designer.name.ja === font.designer.name.en) ? '' : <span lang="en" className="muted"> {font.designer.name.en}</span>;
+    let fontNameEn = (font.name.ja === font.name.en) ? <span className="block speak-none">&nbsp;</span> : <span lang="en" className="block font-weight-400 muted">{font.name.en}</span>;
+    let fontDesignerNameEn = (font.designer.name.ja === font.designer.name.en) ? '' : <span lang="en" className="muted"> {font.designer.name.en}</span>;
 
     if (sidebarLargeScreen) {
       sidebarStyles.left = 0;
@@ -143,8 +143,8 @@ SidebarColophon.defaultProps = {
   showCodeBlock: true,
   viewport: {
     width: 1024,
-    height: 768
-  }
+    height: 768,
+  },
 };
 
 export default SidebarColophon;

@@ -32,7 +32,7 @@ class SpecimenNicoMoji extends React.Component {
 }
 
 SpecimenNicoMoji.defaultProps = {
-  data: {}
+  data: {},
 };
 
 export default SpecimenNicoMoji;

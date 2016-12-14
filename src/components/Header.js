@@ -18,7 +18,7 @@ HeaderColumn.defaultProps = {
   heading: '',
   headingClassName: '',
   className: '',
-  lang: 'ja'
+  lang: 'ja',
 };
 
 class Header extends React.Component {

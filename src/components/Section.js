@@ -18,7 +18,7 @@ Section.defaultProps = {
   basePaddingX: 2,
   basePaddingY: 2,
   className: '',
-  verticalCenter: false
+  verticalCenter: false,
 };
 
 export default Section;

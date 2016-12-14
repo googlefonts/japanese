@@ -16,7 +16,7 @@ require('./css/index.scss');
 window.app = app.extend({
   init() {
     // Remove `.no-js` class from root for progressively enhanced styling
-    var el = document.getElementById('js-root');
+    let el = document.getElementById('js-root');
     el.classList.remove('no-js');
 
     // Load UI fonts
@@ -30,7 +30,7 @@ window.app = app.extend({
 
     // Specimen
     _map(Object.keys(data.fonts), function(index) {
-      var font = data.fonts[index];
+      let font = data.fonts[index];
       if (font.load !== false) {
         loadCSS('https://fonts.googleapis.com/earlyaccess/' + index + '.css');
       }
@@ -40,7 +40,7 @@ window.app = app.extend({
     // TODO Check on existing hosted version
     // although I’m using a fairly heavily subset version here
     loadCSS('css/notosansmono.css');
-  }
+  },
 });
 
 app.init();

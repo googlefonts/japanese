@@ -11,9 +11,9 @@ data.authors = dataAuthors;
 
 class Layout extends React.Component {
   renderChildren(props) {
-    return React.Children.map(props.children, child => {
+    return React.Children.map(props.children, (child) => {
       return React.cloneElement(child, {
-        data: props.data
+        data: props.data,
       });
     });
   }
@@ -37,7 +37,7 @@ class Layout extends React.Component {
 }
 
 Layout.defaultProps = {
-  data: data
+  data: data,
 };
 
 export default Layout;

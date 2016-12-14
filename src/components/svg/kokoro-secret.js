@@ -18,7 +18,7 @@ class KokoroSecret extends React.Component {
 }
 
 KokoroSecret.defaultProps = {
-  fill: 'inherit'
+  fill: 'inherit',
 };
 
 export default KokoroSecret;

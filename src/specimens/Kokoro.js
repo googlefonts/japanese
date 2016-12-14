@@ -44,7 +44,7 @@ class SpecimenKokoro extends React.Component {
 }
 
 SpecimenKokoro.defaultProps = {
-  data: {}
+  data: {},
 };
 
 export default SpecimenKokoro;

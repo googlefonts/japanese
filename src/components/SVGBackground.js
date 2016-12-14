@@ -9,7 +9,7 @@ class SVGBackground extends React.Component {
       eventPageY: 0,
       offsetTop: 0,
       offsetLeft: 0,
-      r: 200
+      r: 200,
     };
 
     this.handleOnMouseMove = this.handleOnMouseMove.bind(this);
@@ -22,7 +22,7 @@ class SVGBackground extends React.Component {
 
     self.setState({
       offsetTop: container.offsetLeft,
-      offsetLeft: container.offsetLeft
+      offsetLeft: container.offsetLeft,
     });
   }
 
@@ -39,7 +39,7 @@ class SVGBackground extends React.Component {
       eventPageX: eventPageX,
       eventPageY: eventPageY,
       offsetTop: container.offsetTop,
-      offsetLeft: container.offsetLeft
+      offsetLeft: container.offsetLeft,
     });
   }
 
@@ -68,7 +68,7 @@ class SVGBackground extends React.Component {
       <div className="overflow-y-hidden"
            onMouseMove={self.handleOnMouseMove}
            onTouchMove={self.handleOnTouchMove}
-           ref={c => self._container = c}>
+           ref={(c) => self._container = c}>
         <div className="z1">{ self.props.children }</div>
         <div className="">
           <svg width="100%"

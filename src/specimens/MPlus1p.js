@@ -4,26 +4,26 @@ import GlyphColumn from '../components/GlyphColumn';
 import GlyphColumnCaption from '../components/GlyphColumnCaption';
 
 class SpecimenMPlus extends React.Component {
-  constructor () {
-    super()
+  constructor() {
+    super();
 
     this.state = {
-      animate: false
-    }
+      animate: false,
+    };
 
-    this.handleOnClick = this.handleOnClick.bind(this)
+    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  handleOnClick () {
-    const self = this
+  handleOnClick() {
+    const self = this;
 
     self.setState({
-      animate: !self.state.animate
-    })
+      animate: !self.state.animate,
+    });
   }
 
   render() {
-    const self = this
+    const self = this;
 
     return (
       <Section
@@ -84,7 +84,7 @@ class SpecimenMPlus extends React.Component {
 }
 
 SpecimenMPlus.defaultProps = {
-  data: {}
+  data: {},
 };
 
 export default SpecimenMPlus;

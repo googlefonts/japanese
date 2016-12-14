@@ -23,7 +23,7 @@ export default Router.extend({
     // 'contributing': 'contributing',
     // 'contributing/': 'contributing',
     // 'contributing/index.html': 'contributing',
-    '*404': 'home' // TODO 404 Breaking `#` links
+    '*404': 'home', // TODO 404 Breaking `#` links
   },
   home() {
     this.renderPage(<Index />);
@@ -36,5 +36,5 @@ export default Router.extend({
   },
   fourOhFour() {
     this.renderPage(<FourOhFour />);
-  }
+  },
 });
