@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { debounce } from 'lodash'
+import PropTypes from 'prop-types'
 
 class FitterHappierText extends React.Component {
 
@@ -78,9 +79,9 @@ FitterHappierText.defaultProps = {
 }
 
 FitterHappierText.propTypes = {
-  text: React.PropTypes.string,
-  baseline: React.PropTypes.number,
-  paddingY: React.PropTypes.number,
+  text: PropTypes.string,
+  baseline: PropTypes.number,
+  paddingY: PropTypes.number,
 }
 
 export default FitterHappierText

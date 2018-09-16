@@ -1,6 +1,6 @@
 import React from 'react';
 import _map from 'lodash.map';
-import FitText from '../vendor/react-fittext';
+import FitText from '@kennethormandy/react-fittext';
 
 class GlyphHidden extends React.Component {
   render() {
