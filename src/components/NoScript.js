@@ -16,7 +16,9 @@ class NoScript extends React.Component {
     Object.keys(data.fonts).map(function(index) {
       let font = data.fonts[index];
       if (font.load !== false) {
-        stylesheets.push('<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/' + index + '.css" async>');
+        stylesheets.push(
+          `<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/${index}.css" async>`
+        );
       }
     });
 
