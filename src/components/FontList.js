@@ -24,7 +24,7 @@ class FontList extends React.Component {
       textAlign = `${props.textAlignment}-align`;
     }
 
-    let typefaceList = _map(Object.keys(data.fonts), function(index) {
+    let typefaceList = Object.keys(data.fonts).map(function(index) {
       let font = data.fonts[index];
       let fontWeight = 400;
       let fontString = (

@@ -1,5 +1,4 @@
 import React from 'react';
-import _map from 'lodash.map';
 
 class NoScript extends React.Component {
   render() {
@@ -14,7 +13,7 @@ class NoScript extends React.Component {
 
     // Determine fallback stylesheets
     // This is done in the same way as in `app.js`
-    _map(Object.keys(data.fonts), function(index) {
+    Object.keys(data.fonts).map(function(index) {
       let font = data.fonts[index];
       if (font.load !== false) {
         stylesheets.push('<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/' + index + '.css" async>');
