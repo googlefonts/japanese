@@ -6,7 +6,7 @@ const GlyphColumnCaption = props => {
       className={`h6 sm-h5 md-h4 lg-h3 font-weight-400 white font-family-base select-none ${
         props.className
       }`}>
-      {self.props.children}
+      {props.children}
     </h3>
   )
 }
