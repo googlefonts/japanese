@@ -2,15 +2,13 @@ import React from 'react';
 import _map from 'lodash.map';
 import FitText from '@kennethormandy/react-fittext';
 
-class GlyphHidden extends React.Component {
-  render() {
-    const self = this;
-
-    return (
-      <span style={{opacity: 0}} className="speak-none" aria-hidden="true">{ self.props.text }</span>
-    );
-  }
-}
+const GlyphHidden = (props) => {
+  return (
+    <span style={{opacity: 0}} className="speak-none" aria-hidden="true">
+      {props.text}
+    </span>
+  );
+};
 
 GlyphHidden.defaultProps = {
   text: '',
@@ -18,48 +16,87 @@ GlyphHidden.defaultProps = {
 
 class FontList extends React.Component {
   render() {
-    const self = this;
-    const data = self.props.data;
-    let textAlign = self.props.textAlignment;
+    const props = this.props;
+    const data = props.data;
+    let textAlign = props.textAlignment;
 
-    if (self.props.textAlignment === 'left' || self.props.textAlignment === 'right') {
-      textAlign = self.props.textAlignment + '-align';
+    if (props.textAlignment === 'left' || props.textAlignment === 'right') {
+      textAlign = `${props.textAlignment}-align`;
     }
 
     let typefaceList = _map(Object.keys(data.fonts), function(index) {
       let font = data.fonts[index];
       let fontWeight = 400;
-      let fontString = <span><GlyphHidden text="安" />あア</span>;
-      let fontSizeAdjust = typeof font.font_size_adjust === 'undefined' ? 1 : (1 / font.font_size_adjust);
+      let fontString = (
+        <span>
+          <GlyphHidden text="安" />あア
+        </span>
+      );
+      let fontSizeAdjust =
+        typeof font.font_size_adjust === 'undefined'
+          ? 1
+          : 1 / font.font_size_adjust;
 
       if (font.published !== false && font.designer) {
         if (font.hiragana === false) {
-          fontString = <span><GlyphHidden text="安あ" />ア</span>;
+          fontString = (
+            <span>
+              <GlyphHidden text="安あ" />ア
+            </span>
+          );
         }
         if (font.kanji === true) {
           fontString = '安あア';
         }
 
         return (
-          <li className={'col-12 m0 ' + self.props.className} key={'header_' + index}><a className="block py2 border-none" href={'#' + index}>
-            <div className="flex items-center py3 border-top border-muted-light height-fontlist-item">
-              <div className={'h1 line-height-1 col-4 sm-col-3 md-col-5 lg-col-' + self.props.firstColumnLgCol + ' ' + self.props.color + ' ' + textAlign}>
-                <FitText compressor={0.33 * fontSizeAdjust} minFontSize={self.props.minFontSize} maxFontSize={self.props.maxFontSize}>
-                  <div className={'break-none wf-' + index + ' font-weight-' + fontWeight} style={{fontSize: (font.font_size_adjust || 1) + 'em'}}>{fontString}</div>
-                </FitText>
+          <li
+            className={`col-12 m0 ${props.className}`}
+            key={`header_${index}`}>
+            <a className="block py2 border-none" href={`#${index}`}>
+              <div className="flex items-center py3 border-top border-muted-light height-fontlist-item">
+                <div
+                  className={`h1 line-height-1 col-4 sm-col-3 md-col-5 lg-col-${
+                    props.firstColumnLgCol
+                  } ${props.color} ${textAlign}`}>
+                  <FitText
+                    compressor={0.33 * fontSizeAdjust}
+                    minFontSize={props.minFontSize}
+                    maxFontSize={props.maxFontSize}>
+                    <div
+                      className={`break-none wf-${index} font-weight-${fontWeight}`}
+                      style={{fontSize: `${font.font_size_adjust || 1}em`}}>
+                      {fontString}
+                    </div>
+                  </FitText>
+                </div>
+                <div className="flex-auto line-height-2 pl2">
+                  <span>
+                    {font.name.ja}{' '}
+                    <span lang="en" className="muted-dark">
+                      {font.name.en === font.name.ja ? '' : font.name.en}
+                    </span>
+                  </span>
+                  <span className="block mt1">
+                    {font.designer.name.ja}{' '}
+                    <span lang="en" className="muted-dark">
+                      {font.designer.name.en === font.designer.name.ja
+                        ? ''
+                        : font.designer.name.en}
+                    </span>
+                  </span>
+                </div>
               </div>
-              <div className="flex-auto line-height-2 pl2">
-                <span>{font.name.ja} <span lang="en" className="muted-dark">{font.name.en === font.name.ja ? '' : font.name.en}</span></span>
-                <span className="block mt1">{font.designer.name.ja} <span lang="en" className="muted-dark">{font.designer.name.en === font.designer.name.ja ? '' : font.designer.name.en}</span></span>
-              </div>
-            </div>
-          </a></li>
+            </a>
+          </li>
         );
       }
     });
 
     return (
-      <ul className="flex flex-wrap m0 p0 list-style-none items-center">{typefaceList}</ul>
+      <ul className="flex flex-wrap m0 p0 list-style-none items-center">
+        {typefaceList}
+      </ul>
     );
   }
 }

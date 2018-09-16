@@ -3,7 +3,6 @@ import data from '../data';
 import dataFonts from '../data/fonts';
 import dataAuthors from '../data/authors';
 import ga from 'react-ga';
-import smoothscroll from 'smoothscroll';
 import NoScript from '../components/NoScript';
 
 data.fonts = dataFonts;
@@ -29,7 +28,7 @@ class Layout extends React.Component {
     return (
       <div className="kern liga">
         {self.renderChildren(self.props)}
-        <script async src="https://fonts.googleapis.com/measure"></script>
+        <script async src="https://fonts.googleapis.com/measure" />
         <NoScript {...self.props} />
       </div>
     );
