@@ -1,29 +1,29 @@
-import React from 'react'
-import FitText from '@kennethormandy/react-fittext'
-import FontList from '../components/FontList'
+import React from 'react';
+import FitText from '@kennethormandy/react-fittext';
+import FontList from '../components/FontList';
 
-const HeaderColumn = props => {
+const HeaderColumn = (props) => {
   return (
     <div
       className={`col-12 sm-col-6 px1 md-px2 ${props.className}`}
       lang={props.lang}>
       <div className="h4 md-h3">{props.children}</div>
     </div>
-  )
-}
+  );
+};
 
 HeaderColumn.defaultProps = {
   heading: '',
   headingClassName: '',
   className: '',
   lang: 'ja',
-}
+};
 
-const Header = props => {
+const Header = (props) => {
   return (
     <div
       className="bg-white black font-family-base relative pb4 bg-white black"
-      style={{ zIndex: 100 }}>
+      style={{zIndex: 100}}>
       <header className="mx-auto md-max-width-4 lg-max-width-5 mb4 px1 md-px2 lg-px3 pt2 md-pt3 font-weight-500">
         <div className="h4 md-h3 red-small mb1 md-pl1" lang="en">
           Google Fonts + Japanese Early Access
@@ -32,9 +32,9 @@ const Header = props => {
           <FitText compressor={1}>
             <h1 className="h1 line-height-2 my0 mb3 red font-weight-500">
               <span className="break-none">Google Fonts</span>
-              <span style={{ fontSize: `0.9em` }}>&nbsp;+&nbsp;日本語</span>
+              <span style={{fontSize: `0.9em`}}>&nbsp;+&nbsp;日本語</span>
               <br />
-              <span style={{ fontSize: `0.9em` }}>早期アクセス</span>
+              <span style={{fontSize: `0.9em`}}>早期アクセス</span>
             </h1>
           </FitText>
         </div>
@@ -88,7 +88,7 @@ const Header = props => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -24,9 +24,11 @@ class NoScript extends React.Component {
 
     // https://git.io/vPtBU
     return (
-      <noscript dangerouslySetInnerHTML={{
-        __html: stylesheets.join(''),
-      }} />
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: stylesheets.join(''),
+        }}
+      />
     );
   }
 }
