@@ -20,8 +20,6 @@ HeaderColumn.defaultProps = {
 }
 
 const Header = props => {
-  const props = this.props
-
   return (
     <div
       className="bg-white black font-family-base relative pb4 bg-white black"
