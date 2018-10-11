@@ -291,8 +291,8 @@
 		"published": false,
 		"feature_nav": false,
 		"name": {
-			"ja": "Google Fonts + 日本語 早期アクセス",
-			"en": "Google Fonts + Japanese Early Access"
+			"ja": "Google Fonts + 日本語",
+			"en": "Google Fonts + Japanese"
 		},
 		"description": {
 			"ja": false,
@@ -332,7 +332,8 @@
 	},
 	"keifont": {
 		"load": false,
-		"published": false,
+		"published": true,
+		"earlyAccess": true,
 		"name": {
 			"ja": "けいふぉんと",
 			"en": "Kei Font"

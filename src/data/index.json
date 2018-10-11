@@ -1,6 +1,13 @@
 {
-  "name": "Google Fonts + 日本語",
-  "title": "Google Fonts + 日本語 • Google Fonts + Japanese",
+  "name": {
+    "en": "Google Fonts",
+    "ja": "Google Fonts"
+  },
+  "titleSeparator": " + ",
+  "title": {
+    "en": "Japanese",
+    "ja": "日本語"
+  },
   "description": "As Google makes progress on supporting Japanese web typography, we invite designers and developers to experiment with these Japanese web fonts now available from Google Fonts.",
   "url": "https://googlefonts.github.io/japanese",
   "repository": "https://github.com/googlefonts/japanese",
