@@ -41,13 +41,24 @@ const Header = (props) => {
         <div className="sm-flex sm-mxn1 md-mxn2 line-height-4 font-weight-400">
           <HeaderColumn>
             <p>
-              <a href="https://fonts.google.com">Google Fonts</a> は、デザイナー
+              <a
+                href="https://fonts.google.com"
+                title="Google Fonts"
+                target="_blank"
+                rel="noopener">
+                Google Fonts
+              </a>{' '}
+              は、デザイナー
               ウェブフォントを直感的にご利用いただける、安定したオープンソース
-              ディレクトリです。<a
+              ディレクトリです。
+              <a
                 href="https://fonts.google.com/earlyaccess"
+                target="_blank"
+                rel="noopener"
                 title="Google Fonts Early Access">
                 Google Fonts 早期アクセス
-              </a>では、現時点で完全にはサポートしていないフォントを試験的に提供しています。
+              </a>
+              では、現時点で完全にはサポートしていないフォントを試験的に提供しています。
             </p>
             <p>
               膨大な数の文字のデザインに要する時間や、大容量のフォント
@@ -58,10 +69,19 @@ const Header = (props) => {
           </HeaderColumn>
           <HeaderColumn lang="en">
             <p>
-              <a href="https://fonts.google.com">Google Fonts</a> provides an
-              intuitive and robust directory of open source designer web fonts.{' '}
+              <a
+                href="https://fonts.google.com"
+                title="Google Fonts"
+                target="_blank"
+                rel="noopener">
+                Google Fonts
+              </a>{' '}
+              provides an intuitive and robust directory of open source designer
+              web fonts.{' '}
               <a
                 href="https://fonts.google.com/earlyaccess"
+                target="_blank"
+                rel="noopener"
                 title="Google Fonts Early Access">
                 Google Fonts Early Access
               </a>{' '}
