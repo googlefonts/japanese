@@ -60,10 +60,17 @@
     "markdown-loader": "0.1.7",
     "node-sass": "3.7.0",
     "postcss-loader": "0.13.0",
+    "prettier": "1.14.3",
     "sass-loader": "4.0.2",
     "style-loader": "0.13.1",
     "surge": "0.20.1",
     "webpack": "1.13.0"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": true,
+    "singleQuote": true,
+    "jsxBracketSameLine": true
   },
   "eslintConfig": {
     "parser": "babel-eslint",
