@@ -1,6 +1,5 @@
 import 'es6-shim';
 import app from 'ampersand-app';
-import _map from 'lodash.map';
 import {loadCSS} from 'fg-loadcss';
 import data from './data';
 import Router from './router';
@@ -29,7 +28,7 @@ window.app = app.extend({
     this.router.history.start();
 
     // Specimen
-    _map(Object.keys(data.fonts), function(index) {
+    Object.keys(data.fonts).map(function(index) {
       let font = data.fonts[index];
       if (font.load !== false) {
         loadCSS('https://fonts.googleapis.com/earlyaccess/' + index + '.css');
