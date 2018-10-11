@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import _map from 'lodash.map';
 import FitText from '@kennethormandy/react-fittext';
 
-const GlyphHidden = props => {
+const GlyphHidden = (props) => {
   return (
-    <span style={{ opacity: 0 }} className="speak-none" aria-hidden="true">
+    <span style={{opacity: 0}} className="speak-none" aria-hidden="true">
       {props.text}
     </span>
   );
@@ -15,7 +15,7 @@ GlyphHidden.defaultProps = {
   text: '',
 };
 
-const FontListItemDesigner = props => {
+const FontListItemDesigner = (props) => {
   if (props) {
     return (
       <span className="block mt1">
@@ -30,7 +30,7 @@ const FontListItemDesigner = props => {
   return null;
 };
 
-const FontListItem = props => {
+const FontListItem = (props) => {
   if (props.published === false || typeof props.designer === 'undefined') {
     return null;
   }
@@ -62,7 +62,7 @@ const FontListItem = props => {
             className={`h1 line-height-1 col-4 sm-col-3 md-col-5 lg-col-${
               props.firstColumnLgCol
             } ${props.color} ${props.textAlign}`}>
-            <div style={{ fontSize: `${props.font_size_adjust || 1}em` }}>
+            <div style={{fontSize: `${props.font_size_adjust || 1}em`}}>
               <FitText
                 compressor={0.33 * fontSizeAdjust}
                 minFontSize={props.minFontSize}
@@ -87,7 +87,7 @@ const FontListItem = props => {
             {props.earlyAccess === true ? (
               <div className="font-weight-600 red mt2">
                 <span lang="en">{props.earlyAccessLabel.en}</span>{' '}
-                <span style={{ fontSize: '0.9em' }} lang="ja">
+                <span style={{fontSize: '0.9em'}} lang="ja">
                   {props.earlyAccessLabel.ja}
                 </span>
               </div>

@@ -19,12 +19,12 @@ HeaderColumn.defaultProps = {
   lang: 'ja',
 };
 
-const Header = props => {
+const Header = (props) => {
   const data = props.data;
   return (
     <div
       className="bg-white black font-family-base relative pb4 bg-white black"
-      style={{ zIndex: 100 }}>
+      style={{zIndex: 100}}>
       <header className="mx-auto md-max-width-4 lg-max-width-5 mb4 px1 md-px2 lg-px3 pt2 md-pt3 font-weight-500">
         <div className="h4 md-h3 red-small mb1 md-pl1" lang="en">
           {data.name.en}
@@ -35,7 +35,7 @@ const Header = props => {
           <FitText compressor={1.975}>
             <h1 className="line-height-2 my0 mb3 red font-weight-400">
               <span className="break-none">{data.name.ja}</span>
-              <span style={{ fontSize: `0.9em` }}>
+              <span style={{fontSize: `0.9em`}}>
                 {data.titleSeparator}
                 {data.title.ja}
               </span>
