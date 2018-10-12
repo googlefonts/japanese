@@ -39,10 +39,6 @@ const Header = (props) => {
                 {data.titleSeparator}
                 {data.title.ja}
               </span>
-              {/* Early Access tagline
-              <br />
-              <span style={{fontSize: `0.9em`}}>早期アクセス</span>
-              */}
             </h1>
           </FitText>
         </div>

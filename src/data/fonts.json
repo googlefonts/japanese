@@ -145,6 +145,7 @@
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
+		"earlyAccess": true,
 		"google_fonts_id": "Sawarabi Mincho",
 		"name": {
 			"ja": "さわらび明朝",
@@ -314,6 +315,7 @@
 	"harenosora": {
 		"load": false,
 		"published": false,
+		"earlyAccess": true,
 		"fallback": "sans-serif",
 		"name": {
 			"ja": "はれのそら明朝",
@@ -332,7 +334,7 @@
 	},
 	"keifont": {
 		"load": false,
-		"published": true,
+		"published": false,
 		"earlyAccess": true,
 		"name": {
 			"ja": "けいふぉんと",

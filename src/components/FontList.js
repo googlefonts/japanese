@@ -14,6 +14,33 @@ GlyphHidden.defaultProps = {
   text: '',
 };
 
+const EarlyAccessFlag = (props) => {
+  return (
+    <div
+      className="absolute border-top line-height-3 col-1 top-0 right-0 border-gray gray pt2 font-weight-400"
+      style={{height: '100%', marginTop: '-1px'}}>
+      <div className="vertical">
+        <div lang="en">{props.label.en}</div>{' '}
+        <div lang="ja" style={{fontSize: '0.9em'}}>
+          {props.label.ja}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+EarlyAccessFlag.defaultProps = {
+  label: {
+    en: 'Early Access',
+    ja: '早期アクセス',
+  },
+};
+
+EarlyAccessFlag.propTypes = {
+  label: PropTypes.object,
+};
+
+
 const FontListItemDesigner = (props) => {
   if (props) {
     return (
@@ -56,7 +83,10 @@ const FontListItem = (props) => {
   return (
     <li className={`col-12 m0 ${props.className}`}>
       <a className="block py2 border-none" href={`#${props.font}`}>
-        <div className="flex items-center py3 border-top border-muted-light height-fontlist-item">
+        <div className="flex relative items-center py3 border-top border-muted-light height-fontlist-item">
+          {props.earlyAccess === true ? (
+            <EarlyAccessFlag label={props.earlyAccessLabel} />
+          ) : null}
           <div
             className={`h1 line-height-1 col-4 sm-col-3 md-col-5 lg-col-${
               props.firstColumnLgCol
@@ -83,14 +113,6 @@ const FontListItem = (props) => {
               </span>
             </span>
             <FontListItemDesigner {...props.designer} />
-            {props.earlyAccess === true ? (
-              <div className="font-weight-600 red mt2">
-                <span lang="en">{props.earlyAccessLabel.en}</span>{' '}
-                <span style={{fontSize: '0.9em'}} lang="ja">
-                  {props.earlyAccessLabel.ja}
-                </span>
-              </div>
-            ) : null}
           </div>
         </div>
       </a>
@@ -100,6 +122,7 @@ const FontListItem = (props) => {
 
 FontListItem.propTypes = {
   designer: PropTypes.object.isRequired,
+  earlyAccessLabel: PropTypes.object,
 };
 
 FontListItem.defaultProps = {
@@ -110,10 +133,6 @@ FontListItem.defaultProps = {
   firstColumnLgCol: 5, // TODO This this a quick fix, could be much nicer. Fixes column width on footer
   textAlignment: 'left',
   className: '',
-  earlyAccessLabel: {
-    en: 'Early Access',
-    ja: '早期アクセス',
-  },
 };
 
 class FontList extends React.Component {
