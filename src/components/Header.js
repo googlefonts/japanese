@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FitText from '@kennethormandy/react-fittext';
 import FontList from '../components/FontList';
 
@@ -17,6 +18,14 @@ HeaderColumn.defaultProps = {
   headingClassName: '',
   className: '',
   lang: 'ja',
+};
+
+HeaderColumn.propTypes = {
+  heading: PropTypes.string,
+  headingClassName: PropTypes.string,
+  className: PropTypes.string,
+  lang: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
 };
 
 const Header = (props) => {
@@ -113,6 +122,11 @@ const Header = (props) => {
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  children: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default Header;
