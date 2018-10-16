@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {StickyContainer, Sticky} from 'react-sticky';
 import CodeBlock from '../components/CodeBlock';
 import Swipeable from 'react-swipeable';
@@ -22,6 +23,11 @@ const Blockquote = (props) => {
       </footer>
     </blockquote>
   );
+};
+
+Blockquote.propTypes = {
+  quote: PropTypes.object.isRequired,
+  name: PropTypes.object.isRequired,
 };
 
 const CodeBlockWrapper = (props) => {
@@ -54,6 +60,11 @@ const CodeBlockWrapper = (props) => {
 };
 
 CodeBlockWrapper.defaultProps = {};
+CodeBlockWrapper.propTypes = {
+  font: PropTypes.object.isRequired,
+  google_fonts_id: PropTypes.string,
+  name: PropTypes.object,
+};
 
 const SidebarArrow = (props) => {
   let className = `pb2 speak-none select-none ${!props.visible ? 'hide' : ''}`;
@@ -84,6 +95,11 @@ SidebarArrow.defaultProps = {
   deg: 0,
 };
 
+SidebarArrow.propTypes = {
+  visible: PropTypes.bool.isRequired,
+  deg: PropTypes.number.isRequired,
+};
+
 const MainWrapper = (props) => {
   return (
     <div className="flex flex-wrap justify-start md-justify-end relative font-family-base">
@@ -93,6 +109,10 @@ const MainWrapper = (props) => {
       </div>
     </div>
   );
+};
+
+MainWrapper.propTypes = {
+  children: PropTypes.array.isRequired,
 };
 
 class SidebarColophon extends React.Component {
@@ -257,6 +277,16 @@ SidebarColophon.defaultProps = {
     width: 1024,
     height: 768,
   },
+};
+
+SidebarColophon.propTypes = {
+  backgroundColor: PropTypes.string,
+  onClickSidebar: PropTypes.oneOf(PropTypes.bool, PropTypes.func),
+  onSwipedLeft: PropTypes.oneOf(PropTypes.bool, PropTypes.func),
+  onSwipedRight: PropTypes.oneOf(PropTypes.bool, PropTypes.func),
+  showCodeBlock: PropTypes.oneOf(PropTypes.bool, PropTypes.func),
+  viewport: PropTypes.object.isRequired,
+  children: PropTypes.object.isRequired,
 };
 
 export default SidebarColophon;
