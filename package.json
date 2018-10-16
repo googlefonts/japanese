@@ -70,7 +70,7 @@
     "semi": true,
     "singleQuote": true,
     "jsxBracketSameLine": true,
-    "arrowParens": true
+    "arrowParens": "always"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
