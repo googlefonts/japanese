@@ -19,6 +19,10 @@ const FontListItemDesigner = (props) => {
   return null;
 };
 
+FontListItemDesigner.propTypes = {
+  name: PropTypes.object.isRequired,
+};
+
 const FontListItem = (props) => {
   if (props.published === false || typeof props.designer === 'undefined') {
     return null;
@@ -87,19 +91,36 @@ const FontListItem = (props) => {
   );
 };
 
-FontListItem.propTypes = {
-  designer: PropTypes.object.isRequired,
-  earlyAccessLabel: PropTypes.object,
-};
-
 FontListItem.defaultProps = {
   color: 'black',
   fontWeight: 400,
   maxFontSize: 120,
   minFontSize: 24,
   firstColumnLgCol: 5, // TODO This this a quick fix, could be much nicer. Fixes column width on footer
-  textAlignment: 'left',
+  textAlign: 'left',
   className: '',
+};
+
+FontListItem.propTypes = {
+  name: PropTypes.object.isRequired,
+  font: PropTypes.object.isRequired,
+  designer: PropTypes.object.isRequired,
+  published: PropTypes.bool,
+  color: PropTypes.string.isRequired,
+  font_size_adjust: PropTypes.number,
+  fontWeight: PropTypes.number.isRequired,
+  maxFontSize: PropTypes.number.isRequired,
+  minFontSize: PropTypes.number.isRequired,
+  textAlign: PropTypes.oneOf('left', 'right', 'center'),
+  className: PropTypes.string,
+  firstColumnLgCol: PropTypes.number.isRequired,
+
+  earlyAccess: PropTypes.bool.isRequired,
+  earlyAccessLabel: PropTypes.object,
+
+  kanji: PropTypes.bool.isRequired,
+  hiragana: PropTypes.bool.isRequired,
+  katakana: PropTypes.bool.isRequired,
 };
 
 class FontList extends React.Component {
@@ -135,6 +156,10 @@ class FontList extends React.Component {
 
 FontList.defaultProps = {
   data: {},
+};
+
+FontList.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default FontList;
