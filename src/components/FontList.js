@@ -1,18 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FitText from '@kennethormandy/react-fittext';
-
-const GlyphHidden = (props) => {
-  return (
-    <span style={{opacity: 0}} className="speak-none" aria-hidden="true">
-      {props.text}
-    </span>
-  );
-};
-
-GlyphHidden.defaultProps = {
-  text: '',
-};
+import GlyphHidden from './GlyphHidden';
 
 const EarlyAccessFlag = (props) => {
   return (
