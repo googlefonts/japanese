@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const GlyphColumnCaption = (props) => {
   return (
@@ -13,6 +14,11 @@ const GlyphColumnCaption = (props) => {
 
 GlyphColumnCaption.defaultProps = {
   className: '',
+};
+
+GlyphColumnCaption.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.object.isRequired,
 };
 
 export default GlyphColumnCaption;
