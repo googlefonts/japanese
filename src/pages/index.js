@@ -42,8 +42,14 @@ class Index extends React.Component {
       if (window && document) {
         // Via http://stackoverflow.com/a/11744120/864799
         return {
-          width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-          height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+          width:
+            window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth,
+          height:
+            window.innerHeight ||
+            document.documentElement.clientHeight ||
+            document.body.clientHeight,
         };
       }
     };
@@ -80,7 +86,10 @@ class Index extends React.Component {
 
     if (self.state.viewport.width < self.props.sidebarMaxWidth) {
       self.setState({
-        sidebar: (typeof newSidebarState === 'undefined') ? !self.state.sidebar : newSidebarState,
+        sidebar:
+          typeof newSidebarState === 'undefined'
+            ? !self.state.sidebar
+            : newSidebarState,
       });
     }
   }
@@ -106,8 +115,14 @@ class Index extends React.Component {
     if (e && e.currentPosition === 'inside') {
       self.setState({
         active: font,
-        backgroundColor: typeof opts.backgroundColor === 'undefined' ? self.state.backgroundColor : opts.backgroundColor,
-        codeBlock: typeof opts.codeBlock === 'undefined' ? self.state.codeBlock : opts.codeBlock,
+        backgroundColor:
+          typeof opts.backgroundColor === 'undefined'
+            ? self.state.backgroundColor
+            : opts.backgroundColor,
+        codeBlock:
+          typeof opts.codeBlock === 'undefined'
+            ? self.state.codeBlock
+            : opts.codeBlock,
       });
     }
   }
@@ -121,7 +136,8 @@ class Index extends React.Component {
     return (
       <div style={{height: 100 + '%'}}>
         <Header {...self.props} />
-        <SidebarColophon {...self.props}
+        <SidebarColophon
+          {...self.props}
           ref="sidebar"
           show={self.state.sidebar}
           onClickSidebar={self.onClickSpecimen}
@@ -131,90 +147,171 @@ class Index extends React.Component {
           viewport={self.state.viewport}
           showCodeBlock={self.state.codeBlock}
           backgroundColor={self.state.backgroundColor}>
-          <div className={'clearfix animate-bg bg-' + self.state.backgroundColor}>
+          <div
+            className={'clearfix animate-bg bg-' + self.state.backgroundColor}>
+            <div className="clearfix" id="mplus1p">
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'mplus1p',
+                  {
+                    backgroundColor: 'blue',
+                    codeBlock: true,
+                  }
+                )}
+              />
+              <SpecimenMPlus1p {...self.props} />
+            </div>
 
-          <div className="clearfix" id="mplus1p">
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'mplus1p', {
-              backgroundColor: 'blue',
-              codeBlock: true,
-            })} />
-            <SpecimenMPlus1p {...self.props} />
+            <div className="clearfix" id="roundedmplus1c">
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'roundedmplus1c',
+                  {
+                    backgroundColor: 'navy',
+                    codeBlock: true,
+                  }
+                )}
+              />
+              <SpecimenRoundedMPlus1c {...self.props} />
+            </div>
+
+            <div className="clearfix" id="hannari">
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'hannari',
+                  {
+                    backgroundColor: 'red',
+                    codeBlock: true,
+                  }
+                )}
+              />
+              <SpecimenHannari {...self.props} />
+            </div>
+
+            <div
+              className="clearfix"
+              id="kokoro"
+              style={{minHeight: 100 + 'vh'}}>
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'kokoro',
+                  {
+                    backgroundColor: 'green',
+                    codeBlock: true,
+                  }
+                )}
+              />
+              <SpecimenKokoro {...self.props} />
+            </div>
+
+            <div className="clearfix" id="sawarabimincho">
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'sawarabimincho',
+                  {
+                    backgroundColor: 'gray',
+                    codeBlock: true,
+                  }
+                )}
+              />
+              <SpecimenSawarabiMincho {...self.props} />
+            </div>
+
+            <div className="clearfix" id="sawarabigothic">
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'sawarabigothic',
+                  {
+                    backgroundColor: 'gray',
+                    codeBlock: true,
+                  }
+                )}
+              />
+              <SpecimenSawarabiGothic {...self.props} />
+            </div>
+
+            <div className="clearfix" id="nikukyu">
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'nikukyu',
+                  {
+                    backgroundColor: 'olive',
+                    codeBlock: true,
+                  }
+                )}
+              />
+              <SpecimenNikukyu {...self.props} />
+            </div>
+
+            <div className="clearfix" id="nicomoji">
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'nicomoji',
+                  {
+                    backgroundColor: 'gray',
+                    codeBlock: true,
+                  }
+                )}
+              />
+              <SpecimenNicoMoji {...self.props} />
+            </div>
+
+            <div className="clearfix" id="notosansjapanese">
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'notosansjapanese',
+                  {
+                    backgroundColor: 'fuchsia',
+                    codeBlock: true,
+                  }
+                )}
+              />
+              <SpecimenNotoSansJapanese {...self.props} />
+            </div>
+
+            <div className="clearfix">
+              <Waypoint
+                bottomOffset={'50%'}
+                topOffset={'-50%'}
+                onPositionChange={self.handleSpecimenWaypoint.bind(
+                  self,
+                  'footer',
+                  {
+                    backgroundColor: 'white',
+                    codeBlock: false,
+                  }
+                )}
+              />
+              <Footer {...self.props} />
+            </div>
           </div>
-
-          <div className="clearfix" id="roundedmplus1c">
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'roundedmplus1c', {
-              backgroundColor: 'navy',
-              codeBlock: true,
-            })} />
-            <SpecimenRoundedMPlus1c {...self.props} />
-          </div>
-
-          <div className="clearfix" id="hannari">
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'hannari', {
-              backgroundColor: 'red',
-              codeBlock: true,
-            })} />
-            <SpecimenHannari {...self.props} />
-          </div>
-
-          <div className="clearfix" id="kokoro" style={{minHeight: 100 + 'vh'}}>
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'kokoro', {
-              backgroundColor: 'green',
-              codeBlock: true,
-            })} />
-            <SpecimenKokoro {...self.props} />
-          </div>
-
-          <div className="clearfix" id="sawarabimincho">
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'sawarabimincho', {
-              backgroundColor: 'gray',
-              codeBlock: true,
-            })} />
-            <SpecimenSawarabiMincho {...self.props} />
-          </div>
-
-          <div className="clearfix" id="sawarabigothic">
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'sawarabigothic', {
-              backgroundColor: 'gray',
-              codeBlock: true,
-            })} />
-            <SpecimenSawarabiGothic {...self.props} />
-          </div>
-
-          <div className="clearfix" id="nikukyu">
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'nikukyu', {
-              backgroundColor: 'olive',
-              codeBlock: true,
-            })} />
-            <SpecimenNikukyu {...self.props} />
-          </div>
-
-          <div className="clearfix" id="nicomoji">
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'nicomoji', {
-              backgroundColor: 'gray',
-              codeBlock: true,
-            })} />
-            <SpecimenNicoMoji {...self.props} />
-          </div>
-
-          <div className="clearfix" id="notosansjapanese">
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'notosansjapanese', {
-              backgroundColor: 'fuchsia',
-              codeBlock: true,
-            })} />
-            <SpecimenNotoSansJapanese {...self.props} />
-          </div>
-
-          <div className="clearfix">
-            <Waypoint bottomOffset={'50%'} topOffset={'-50%'} onPositionChange={self.handleSpecimenWaypoint.bind(self, 'footer', {
-              backgroundColor: 'white',
-              codeBlock: false,
-            })} />
-            <Footer {...self.props} />
-          </div>
-
-          </div>
-
         </SidebarColophon>
       </div>
     );
