@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import throttle from 'lodash.throttle';
 import Waypoint from 'react-waypoint';
 import googleFontsBadge from '@googlefonts/badge';
@@ -223,6 +224,10 @@ class Index extends React.Component {
 Index.defaultProps = {
   // $breakpoint-md
   sidebarMaxWidth: 830,
+};
+
+Index.propTypes = {
+  sidebarMaxWidth: PropTypes.number,
 };
 
 export default Index;
