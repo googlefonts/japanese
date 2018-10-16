@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // TODO Remove `.overflow-hidden` and min height
 const Section = (props) => {
@@ -25,6 +26,15 @@ Section.defaultProps = {
   basePaddingY: 2,
   className: '',
   verticalCenter: false,
+};
+
+Section.propTypes = {
+  maxWidth: PropTypes.number.isRequired,
+  basePaddingX: PropTypes.number.isRequired,
+  basePaddingY: PropTypes.number.isRequired,
+  className: PropTypes.string,
+  verticalCenter: PropTypes.bool.isRequired,
+  children: PropTypes.children.isRequired,
 };
 
 export default Section;
