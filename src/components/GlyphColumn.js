@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FitterHappierText from '../vendor/react-fitter-happier-text';
 
 const GlyphColumn = (props) => {
@@ -14,6 +15,13 @@ GlyphColumn.defaultProps = {
   className: '',
   compressor: 1.0,
   value: '',
+};
+
+GlyphColumn.propTypes = {
+  fontWeight: PropTypes.number.isRequired,
+  className: PropTypes.string,
+  compressor: PropTypes.number,
+  value: PropTypes.string.isRequired,
 };
 
 export default GlyphColumn;
