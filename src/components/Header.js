@@ -31,7 +31,7 @@ const Header = (props) => {
           {data.titleSeparator}
           {data.title.en}
         </div>
-        <div className="col-12 h1">
+        <div className="col-12 h1 notranslate" lang="ja">
           <FitText compressor={1.975}>
             <h1 className="line-height-2 my0 mb3 red font-weight-400">
               <span className="break-none">{data.name.ja}</span>
@@ -43,7 +43,7 @@ const Header = (props) => {
           </FitText>
         </div>
         <div className="sm-flex sm-mxn1 md-mxn2 line-height-4 font-weight-400">
-          <HeaderColumn>
+          <HeaderColumn className="notranslate" lang="ja">
             <p>
               <a
                 href="https://fonts.google.com"

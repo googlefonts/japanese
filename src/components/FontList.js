@@ -40,7 +40,6 @@ EarlyAccessFlag.propTypes = {
   label: PropTypes.object,
 };
 
-
 const FontListItemDesigner = (props) => {
   if (props) {
     return (
@@ -100,14 +99,18 @@ const FontListItem = (props) => {
                   className={`break-none wf-${props.font} font-weight-${
                     props.fontWeight
                   }`}>
-                  <span>{textString}</span>
+                  <span lang="ja" className="notranslate">
+                    {textString}
+                  </span>
                 </div>
               </FitText>
             </div>
           </div>
           <div className="flex-auto line-height-2 pl2">
             <span>
-              {props.name.ja}{' '}
+              <span lang="ja" className="notranslate">
+                {props.name.ja}
+              </span>{' '}
               <span lang="en" className="muted-dark">
                 {props.name.en === props.name.ja ? '' : props.name.en}
               </span>

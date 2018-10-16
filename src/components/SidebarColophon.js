@@ -6,12 +6,16 @@ import Swipeable from 'react-swipeable';
 const Blockquote = (props) => {
   return (
     <blockquote>
-      <p className="sidebar-quote">{props.quote.ja}</p>
+      <p className="sidebar-quote" lang="ja">
+        {props.quote.ja}
+      </p>
       <p className="xsh-hide smh-hide mdh-hide muted-dark" lang="en">
         {props.quote.en}
       </p>
       <footer>
-        <span>{props.name.ja}</span>{' '}
+        <span lang="ja" className="notranslate">
+          {props.name.ja}
+        </span>{' '}
         <span className="muted-dark" lang="en">
           {props.name.en}
         </span>
