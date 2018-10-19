@@ -16,3 +16,5 @@ GlyphHidden.defaultProps = {
 GlyphHidden.propTypes = {
   text: PropTypes.string || PropTypes.object,
 };
+
+export default GlyphHidden;
