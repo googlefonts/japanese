@@ -281,10 +281,10 @@ SidebarColophon.defaultProps = {
 
 SidebarColophon.propTypes = {
   backgroundColor: PropTypes.string,
-  onClickSidebar: PropTypes.oneOfType(PropTypes.bool, PropTypes.func),
-  onSwipedLeft: PropTypes.oneOfType(PropTypes.bool, PropTypes.func),
-  onSwipedRight: PropTypes.oneOfType(PropTypes.bool, PropTypes.func),
-  showCodeBlock: PropTypes.oneOfType(PropTypes.bool, PropTypes.func),
+  onClickSidebar: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
+  onSwipedLeft: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
+  onSwipedRight: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
+  showCodeBlock: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
   viewport: PropTypes.object.isRequired,
   children: PropTypes.object.isRequired,
 };

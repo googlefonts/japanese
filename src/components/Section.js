@@ -34,7 +34,7 @@ Section.propTypes = {
   basePaddingY: PropTypes.number.isRequired,
   className: PropTypes.string,
   verticalCenter: PropTypes.bool.isRequired,
-  children: PropTypes.children.isRequired,
+  children: PropTypes.func.isRequired,
 };
 
 export default Section;

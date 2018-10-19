@@ -58,7 +58,7 @@ const FontListItem = (props) => {
             className={`h1 line-height-1 col-4 sm-col-3 md-col-5 lg-col-${
               props.firstColumnLgCol
             } ${props.color} ${props.textAlign}`}>
-            <div style={{fontSize: `${props.font_size_adjust || 1}em`}}>
+            <div style={{ fontSize: `${props.font_size_adjust || 1}em` }}>
               <FitText
                 compressor={0.33 * fontSizeAdjust}
                 minFontSize={props.minFontSize}
@@ -111,7 +111,7 @@ FontListItem.propTypes = {
   fontWeight: PropTypes.number.isRequired,
   maxFontSize: PropTypes.number.isRequired,
   minFontSize: PropTypes.number.isRequired,
-  textAlign: PropTypes.oneOf('left', 'right', 'center'),
+  textAlign: PropTypes.oneOf(['left', 'right', 'center']),
   className: PropTypes.string,
   firstColumnLgCol: PropTypes.number.isRequired,
 
