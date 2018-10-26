@@ -31,6 +31,12 @@ Blockquote.propTypes = {
 };
 
 const CodeBlockWrapper = (props) => {
+  let cssHref = `https://fonts.googleapis.com/css?family=${props.google_fonts_id.split(' ').join('+')}`
+
+  if (props.earlyAccess === true) {
+    cssHref = `https://fonts.googleapis.com/earlyaccess/${props.google_fonts_id.toLowerCase()}.css`
+  }
+  
   return (
     <div className="mxn2 md-mxn3">
       <div className="mb2">
@@ -38,9 +44,7 @@ const CodeBlockWrapper = (props) => {
           HTML
         </abbr>
         <CodeBlock rounded={false} language="html">
-          {'<link href="https://fonts.googleapis.com/earlyaccess/' +
-            props.font +
-            '.css" rel="stylesheet" />'}
+          {`<link href="${cssHref}" rel="stylesheet">`}
         </CodeBlock>
       </div>
       <div className="mb2">
@@ -59,10 +63,14 @@ const CodeBlockWrapper = (props) => {
   );
 };
 
-CodeBlockWrapper.defaultProps = {};
+CodeBlockWrapper.defaultProps = {
+  earlyAccess: false
+};
+
 CodeBlockWrapper.propTypes = {
   font: PropTypes.object.isRequired,
-  google_fonts_id: PropTypes.string,
+  google_fonts_id: PropTypes.string.isRequired,
+  earlyAccess: PropTypes.bool,
   name: PropTypes.object,
 };
 
