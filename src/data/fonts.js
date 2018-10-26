@@ -23,7 +23,13 @@ module.exports = {
 
 		// The URL string from Google Fonts or, if it hasn’t graduated
 		// yet, the Early Access ID.
-		"google_fonts_id": "Mplus 1p",
+		// For example, if the font used to live at 
+		// `https://fonts.googleapis.com/earlyaccess/nicomoji.css` but now
+		// lives at `https://fonts.googleapis.com/css?family=Nico+Moji`,
+		// the `google_fonts_id` should be updated from `nicomoji` to 
+		// `Nico Moji` as this is used to show the code samples
+		// alongside the type specimen.
+		"google_fonts_id": "Example Id",
 
 		// Whether or not the font is Early Access, and should have the
 		// Early Access flag shown on the site.
@@ -53,15 +59,15 @@ module.exports = {
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
-		"google_fonts_id": "Mplus 1p",
+		"google_fonts_id": "M PLUS 1p",
 		"earlyAccess": false,
 		"name": {
-			"ja": "M+ 1p",
-			"en": "M+ 1p"
+			"ja": "M PLUS 1p",
+			"en": "M PLUS 1p"
 		},
 		"description": {
 			"ja": false,
-			"en": "The M+ Outline Fonts Project develops a superfamily set of several families: 4 families with proportional Latin, 3 with fixed-halfwidth Latin, and 2 with fixed-fullwidth Japanese Kana variations. This set, M+ 1p, are fonts with proportional Latin and fixed-fullwidth Japanese, and 7 weights from Thin to Black. The Kana have contrasting straight lines and hand-drawn curves. The Latin is aimed to be a sophisticated and relaxed design."
+			"en": "The M PLUS Outline Fonts Project develops a superfamily set of several families: 4 families with proportional Latin, 3 with fixed-halfwidth Latin, and 2 with fixed-fullwidth Japanese Kana variations. This set, M PLUS 1p, are fonts with proportional Latin and fixed-fullwidth Japanese, and 7 weights from Thin to Black. The Kana have contrasting straight lines and hand-drawn curves. The Latin is aimed to be a sophisticated and relaxed design."
 		},
 		"designer": {
 			"url": false,
@@ -80,15 +86,15 @@ module.exports = {
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
-		"google_fonts_id": "Rounded Mplus 1c",
+		"google_fonts_id": "M PLUS Rounded 1c",
 		"earlyAccess": false,
 		"description": {
 			"ja": false,
-			"en": "The Rounded M+ Project develops versions of the M+ Fonts with rounded terminals. This set, Rounded M+ 1c, are fonts with proportional Latin and fixed-fullwidth Japanese, and 7 weights from Thin to Black. The Kana have traditional slightly curved strokes. The Latin is optimized to be well-proportioned for text typesetting."
+			"en": "The M PLUS Roundeddevelops versions of the M PLUS Fonts with rounded terminals. This set, M PLUS Rounded 1c, are fonts with proportional Latin and fixed-fullwidth Japanese, and 7 weights from Thin to Black. The Kana have traditional slightly curved strokes. The Latin is optimized to be well-proportioned for text typesetting."
 		},
 		"name": {
-			"ja": "Rounded M+ 1c",
-			"en": "Rounded M+ 1c"
+			"ja": "M PLUS Rounded 1c",
+			"en": "M PLUS Rounded 1c"
 		},
 		"designer": {
 			"url": false,
@@ -219,7 +225,7 @@ module.exports = {
 		"katakana": true,
 		"hiragana": true,
 		"font_size_adjust": 1.2,
-		"google_fonts_id": "Nico Moji",
+		"google_fonts_id": "nicomoji",
 		"earlyAccess": true,
 		"name": {
 			"ja": "ニコモジ",
@@ -276,15 +282,15 @@ module.exports = {
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
-		"google_fonts_id": "Noto Sans Japanese",
+		"google_fonts_id": "Noto Sans JP",
 		"earlyAccess": false,
 		"description": {
 			"ja": false,
 			"en": "Noto helps to make the web more beautiful across platforms for all languages. Currently, Noto covers over 30 scripts, and will cover all of Unicode in the future. This is the Sans Japanese family. It has Regular and Bold styles and is hinted."
 		},
 		"name": {
-			"ja": "Noto Sans Japanese",
-			"en": "Noto Sans Japanese"
+			"ja": "Noto Sans JP",
+			"en": "Noto Sans JP"
 		},
 		"designer": {
 			"url": false,

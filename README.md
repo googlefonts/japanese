@@ -4,7 +4,21 @@ As Google makes progress on supporting Japanese web typography, we invite design
 
 This repository contains the type specimen site built to showcase the collection.
 
+The following instructions are for maintaining the type specimen site itself. To learn more about the Google Fonts + 日本語 collection and for HTML + CSS code snippets, head to the [type specimen site](https://googlefonts.github.io/japanese)!
+
 This project is not an official Google project, and Google provides no support for it.
+
+## Updating Font Metadata
+
+You don’t need to run the project locally to update basic metadata—you can even edit it directly on GitHub if you choose.
+
+Font metadata is stored in `src/data/fonts.js`. (It’s a JSON file, but with comments.)
+
+### “Graduating” a font from Early Access
+
+If a font has graduated from Google Fonts Early Access, change `earlyAccess` from `true` to `false`, and ensure the `google_fonts_id` is still correct.
+
+For example, if the font used to live a `https://fonts.googleapis.com/earlyaccess/nicomoji.css` but now lives at `https://fonts.googleapis.com/css?family=Nico+Moji`, the `google_fonts_id` should be updated from `nicomoji` to `Nico Moji` as this is used to show the code samples alongside the type specimen.
 
 ## Running the project locally
 
