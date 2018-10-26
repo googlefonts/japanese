@@ -1,6 +1,6 @@
 
 import React from 'react'
-import debounce from 'lodash.lodash'
+import debounce from 'lodash.debounce'
 import PropTypes from 'prop-types'
 
 class FitterHappierText extends React.Component {
