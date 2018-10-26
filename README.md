@@ -1,4 +1,4 @@
-# Google Fonts + 日本語 早期アクセス
+# Google Fonts + 日本語
 
 As Google makes progress on supporting Japanese web typography, we invite designers and developers to experiment with these Japanese web fonts now available from Google Fonts Early Access.
 

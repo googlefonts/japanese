@@ -64,20 +64,12 @@ const Header = (props) => {
               は、デザイナー
               ウェブフォントを直感的にご利用いただける、安定したオープンソース
               ディレクトリです。
-              <a
-                href="https://fonts.google.com/earlyaccess"
-                target="_blank"
-                rel="noopener"
-                title="Google Fonts Early Access">
-                Google Fonts 早期アクセス
-              </a>
-              では、現時点で完全にはサポートしていないフォントを試験的に提供しています。
             </p>
             <p>
               膨大な数の文字のデザインに要する時間や、大容量のフォント
               ファイルをウェブフォントとして提供する際に必要な技術的インフラストラクチャなど、日本語の書体デザインやフォント開発にはさまざまな課題が立ちふさがります。そこで、規格や技術の開発を進めると同時に、Google
               Fonts
-              早期アクセスを通じてデザイナーやデベロッパーの皆様に日本語のウェブフォントをお試しいただけるようにしました。
+              を通じてデザイナーやデベロッパーの皆様に日本語のウェブフォントをお試しいただけるようにしました。
             </p>
           </HeaderColumn>
           <HeaderColumn lang="en">
@@ -90,16 +82,7 @@ const Header = (props) => {
                 Google Fonts
               </a>{' '}
               provides an intuitive and robust directory of open source designer
-              web fonts.{' '}
-              <a
-                href="https://fonts.google.com/earlyaccess"
-                target="_blank"
-                rel="noopener"
-                title="Google Fonts Early Access">
-                Google Fonts Early Access
-              </a>{' '}
-              is an experimental showcase for fonts that aren’t yet fully
-              supported.
+              web fonts.
             </p>
             <p>
               Japanese typeface design and font development presents many
@@ -108,7 +91,7 @@ const Header = (props) => {
               infrastructure required to serve large font files as web fonts. As
               standards and technology continue to develop, we invite designers
               and developers to experiment with the Japanese web fonts now
-              available on Google Fonts Early Access.
+              available on Google Fonts.
             </p>
           </HeaderColumn>
         </div>
