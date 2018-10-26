@@ -5,7 +5,7 @@ class SpecimenExample extends React.Component {
   render() {
     const self = this;
 
-    // Assign the metadata from `_data/fonts.json`
+    // Assign the metadata from `_data/fonts.js`
     // to variables to use in the tempaltes
     const data = self.props.data;
     const font = data.fonts.example;

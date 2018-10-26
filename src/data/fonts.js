@@ -1,12 +1,40 @@
-{
+module.exports = {
+	// The following object is is an example: feel free to copy
+	// it as the base for adding a new font to the specimen site.
 	"example": {
-		"load": false,
+
+		// Set to `true` to have the font showing in the main listing
 		"published": false,
+
+		// Set a custom fallback font stack
 		"fallback": "sans-serif",
+
+		// Whether or not the typeface supports Kanji.
+		// Used for the main preview.
+		"kanji": true,
+
+		// Whether or not the typeface supports Katakana.
+		// Used for the main preview.
+		"katakana": true,
+
+		// Whether or not the typeface supports Hiragana.
+		// Used for the main preview.
+		"hiragana": true,
+
+		// The URL string from Google Fonts or, if it hasn’t graduated
+		// yet, the Early Access ID.
+		"google_fonts_id": "Mplus 1p",
+
+		// Whether or not the font is Early Access, and should have the
+		// Early Access flag shown on the site.
+		"earlyAccess": false,
+
 		"name": {
-			"ja": "ちょめちょめ",
-			"en": "Example"
+			"ja": "ちょめちょめ", // The font’s name in Japanese
+			"en": "Example" // The font’s name in English
 		},
+
+		// Information about the designer.
 		"designer": {
 			"url": "http://example.com",
 			"name": {
@@ -18,16 +46,15 @@
 				"en": "Something about the typeface"
 			}
 		}
+
 	},
 	"mplus1p": {
-		"feature_nav": true,
 		"fallback": "sans-serif",
-		"license": "OFL",
-		"glyph_count": 8676,
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
 		"google_fonts_id": "Mplus 1p",
+		"earlyAccess": false,
 		"name": {
 			"ja": "M+ 1p",
 			"en": "M+ 1p"
@@ -49,14 +76,12 @@
 		}
 	},
 	"roundedmplus1c": {
-		"feature_nav": false,
 		"fallback": "sans-serif",
-		"license": "OFL",
-		"glyph_count": 8546,
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
 		"google_fonts_id": "Rounded Mplus 1c",
+		"earlyAccess": false,
 		"description": {
 			"ja": false,
 			"en": "The Rounded M+ Project develops versions of the M+ Fonts with rounded terminals. This set, Rounded M+ 1c, are fonts with proportional Latin and fixed-fullwidth Japanese, and 7 weights from Thin to Black. The Kana have traditional slightly curved strokes. The Latin is optimized to be well-proportioned for text typesetting."
@@ -78,15 +103,13 @@
 		}
 	},
 	"hannari": {
-		"feature_nav": true,
 		"fallback": "serif",
-		"license": "OFL",
-		"glyph_count": 230,
 		"kanji": "IPA",
 		"katakana": true,
 		"hiragana": true,
 		"font_size_adjust": 1.2,
 		"google_fonts_id": "Hannari",
+		"earlyAccess": true,
 		"name": {
 			"ja": "はんなり明朝",
 			"en": "Hannari"
@@ -108,15 +131,13 @@
 		}
 	},
 	"kokoro": {
-		"feature_nav": true,
 		"fallback": "serif",
-		"license": "OFL",
-		"glyph_count": 231,
 		"kanji": "IPA",
 		"katakana": true,
 		"hiragana": true,
 		"font_size_adjust": 1.1,
 		"google_fonts_id": "Kokoro",
+		"earlyAccess": true,
 		"name": {
 			"ja": "こころ明朝",
 			"en": "Kokoro"
@@ -138,15 +159,13 @@
 		}
 	},
 	"sawarabimincho": {
-		"feature_nav": true,
 		"fallback": "serif",
-		"license": "OFL",
-		"glyph_count": 3589,
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
 		"earlyAccess": true,
 		"google_fonts_id": "Sawarabi Mincho",
+		"earlyAccess": false,
 		"name": {
 			"ja": "さわらび明朝",
 			"en": "Sawarabi Mincho"
@@ -168,14 +187,12 @@
 		}
 	},
 	"sawarabigothic": {
-		"feature_nav": true,
 		"fallback": "sans-serif",
-		"license": "OFL",
-		"glyph_count": 6945,
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
 		"google_fonts_id": "Sawarabi Gothic",
+		"earlyAccess": false,
 		"name": {
 			"ja": "さわらびゴシック",
 			"en": "Sawarabi Gothic"
@@ -197,15 +214,13 @@
 		}
 	},
 	"nicomoji": {
-		"feature_nav": true,
 		"fallback": "cursive",
-		"license": "OFL",
-		"glyph_count": 774,
 		"kanji": false,
 		"katakana": true,
 		"hiragana": true,
 		"font_size_adjust": 1.2,
 		"google_fonts_id": "Nico Moji",
+		"earlyAccess": true,
 		"name": {
 			"ja": "ニコモジ",
 			"en": "Nico Moji"
@@ -227,15 +242,13 @@
 		}
 	},
 	"nikukyu": {
-		"feature_nav": true,
 		"fallback": "cursive",
-		"license": "OFL",
-		"glyph_count": 182,
 		"kanji": "IPA",
 		"katakana": true,
 		"hiragana": false,
 		"font_size_adjust": 1.1,
 		"google_fonts_id": "Nikukyu",
+		"earlyAccess": true,
 		"name": {
 			"ja": "ニクキュウ",
 			"en": "Nikukyu"
@@ -259,14 +272,12 @@
 	"notosansjapanese": {
 		"load": false,
 		"published": true,
-		"feature_nav": true,
 		"fallback": "sans-serif",
-		"license": "OFL",
-		"glyph_count": 6934,
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
 		"google_fonts_id": "Noto Sans Japanese",
+		"earlyAccess": false,
 		"description": {
 			"ja": false,
 			"en": "Noto helps to make the web more beautiful across platforms for all languages. Currently, Noto covers over 30 scripts, and will cover all of Unicode in the future. This is the Sans Japanese family. It has Regular and Bold styles and is hinted."
@@ -290,7 +301,6 @@
 	"footer": {
 		"load": false,
 		"published": false,
-		"feature_nav": false,
 		"name": {
 			"ja": "Google Fonts + 日本語",
 			"en": "Google Fonts + Japanese"
