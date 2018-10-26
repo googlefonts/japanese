@@ -25,8 +25,6 @@ var hjsConfig = getConfig({
       var pageHtmlString = page ? ReactDOMServer.renderToString(React.createElement(Layout, {}, React.createElement(page))) : ''
       var title = `${data.name.en}${data.titleSeparator}${data.title.en} • ${data.name.ja}${data.titleSeparator}${data.title.ja}` 
 
-      console.log(title)
-
       return context.defaultTemplate({
         html: `<div id="js-root" class="no-js"><div>${pageHtmlString}</div></div>`,
         title: title,
