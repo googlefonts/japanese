@@ -16,9 +16,7 @@ Font metadata is stored in `src/data/fonts.js`. (It’s a JSON file, but with co
 
 ### “Graduating” a font from Early Access
 
-If a font has graduated from Google Fonts Early Access, change `earlyAccess` from `true` to `false`, and ensure the `google_fonts_id` is still correct.
-
-For example, if the font used to live a `https://fonts.googleapis.com/earlyaccess/nicomoji.css` but now lives at `https://fonts.googleapis.com/css?family=Nico+Moji`, the `google_fonts_id` should be updated from `nicomoji` to `Nico Moji` as this is used to show the code samples alongside the type specimen.
+If a font has graduated from Google Fonts Early Access, change `earlyAccess` from `true` to `false`, and ensure the `google_fonts_id` is still accurate. This is used to display the HTML and CSS code samples.
 
 ## Running the project locally
 

@@ -23,12 +23,7 @@ module.exports = {
 
 		// The URL string from Google Fonts or, if it hasn’t graduated
 		// yet, the Early Access ID.
-		// For example, if the font used to live at 
-		// `https://fonts.googleapis.com/earlyaccess/nicomoji.css` but now
-		// lives at `https://fonts.googleapis.com/css?family=Nico+Moji`,
-		// the `google_fonts_id` should be updated from `nicomoji` to 
-		// `Nico Moji` as this is used to show the code samples
-		// alongside the type specimen.
+		// This is used to display the HTML and CSS code samples.
 		"google_fonts_id": "Example Id",
 
 		// Whether or not the font is Early Access, and should have the
@@ -225,7 +220,7 @@ module.exports = {
 		"katakana": true,
 		"hiragana": true,
 		"font_size_adjust": 1.2,
-		"google_fonts_id": "nicomoji",
+		"google_fonts_id": "Nico Moji",
 		"earlyAccess": true,
 		"name": {
 			"ja": "ニコモジ",
