@@ -10,6 +10,7 @@ var sizeOf = require('image-size')
 var merge = require('lodash.merge')
 var Layout = require('./src/components/Layout').default
 var Index = require('./src/pages/index').default
+var FourOhFour = require('./src/pages/404').default
 var data = require('./src/data')
 var ogImage = sizeOf('./build/media/og-image.png')
 var pkg = require('./package.json')
@@ -52,8 +53,8 @@ var hjsConfig = getConfig({
 
     return {
       '200.html': renderPage(),
-      'index.html': renderPage(Index)
-      // , 'contributing.html': renderPage(Contributing)
+      'index.html': renderPage(Index),
+      '404.html': renderPage(FourOhFour)
     }
   }
 })
