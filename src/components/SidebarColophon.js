@@ -31,12 +31,12 @@ Blockquote.propTypes = {
 };
 
 const CodeBlockWrapper = (props) => {
-  let cssHref = `https://fonts.googleapis.com/css?family=${props.google_fonts_id.split(' ').join('+')}`
+  let cssHref = `https://fonts.googleapis.com/css?family=${props.google_fonts_id.split(' ').join('+')}`;
 
   if (props.earlyAccess === true) {
-    cssHref = `https://fonts.googleapis.com/earlyaccess/${props.google_fonts_id.split(' ').join('').toLowerCase()}.css`
+    cssHref = `https://fonts.googleapis.com/earlyaccess/${props.google_fonts_id.split(' ').join('').toLowerCase()}.css`;
   }
-  
+
   return (
     <div className="mxn2 md-mxn3">
       <div className="mb2">
@@ -64,7 +64,7 @@ const CodeBlockWrapper = (props) => {
 };
 
 CodeBlockWrapper.defaultProps = {
-  earlyAccess: false
+  earlyAccess: false,
 };
 
 CodeBlockWrapper.propTypes = {

@@ -95,6 +95,7 @@
       "browser": true
     },
     "globals": {
+      "module": true,
       "require": true
     }
   },

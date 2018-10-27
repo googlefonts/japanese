@@ -1,3 +1,8 @@
+/* global: module */
+/* eslint quotes: ["error", "double"] */
+/* eslint comma-dangle: ["error", "never"] */
+/* eslint semi: ["error", "never"]*/
+
 module.exports = {
 	// The following object is is an example: feel free to copy
 	// it as the base for adding a new font to the specimen site.
@@ -164,7 +169,6 @@ module.exports = {
 		"kanji": true,
 		"katakana": true,
 		"hiragana": true,
-		"earlyAccess": true,
 		"google_fonts_id": "Sawarabi Mincho",
 		"earlyAccess": false,
 		"name": {
