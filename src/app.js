@@ -19,7 +19,9 @@ window.app = app.extend({
     loadCSS('https://fonts.googleapis.com/css?family=Noto+Sans');
 
     this.router = new Router();
-    this.router.history.start();
+    this.router.history.start({
+      hashChange: false
+    });
 
     // Specimen
     Object.keys(data.fonts).map(function(index) {

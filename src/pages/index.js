@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import throttle from 'lodash.throttle';
 import Waypoint from 'react-waypoint';
 import googleFontsBadge from '@googlefonts/badge';
+import 'smoothscroll';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
