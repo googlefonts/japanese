@@ -81,7 +81,7 @@ const SidebarArrow = (props) => {
         className="inline-block"
         style={{
           transform: `rotate(${props.deg}deg)`,
-          transition: 'transform 0.5s 0.15s ease-in-out',
+          transition: 'transform 0.3s ease-in-out',
         }}
       >
         <svg height="24" viewBox="0 0 24 24" width="24">
@@ -174,7 +174,7 @@ class SidebarColophon extends React.Component {
     if (sidebarLargeScreen) {
       sidebarStyle.left = 0;
     } else {
-      sidebarStyle.left = (props.show ? 25 : 83.3333333) + '%';
+      sidebarStyle.left = (props.show ? `25%` : `83.3333333%`);
     }
 
     // TODO switch to toggle
@@ -215,18 +215,15 @@ class SidebarColophon extends React.Component {
         <MainWrapper>
           {props.children}
           <div
-            ref="sidebar"
             style={sidebarStyle}
             className="col-9 md-col-12 right height-100 absolute md-relaitve transition-sidebar"
           >
             <Sticky
-              style={{zIndex: 10, height: 0}}
-              onClick={props.onClickSidebar}
             >
               {({style}) => {
                 // bottomOffset could be set to this computed height
                 return (
-                  <div style={style} className={`bg-${props.backgroundColor}`}>
+                  <div style={style} onClick={props.onClickSidebar} className={`sticky z4 cursor-pointer bg-${props.backgroundColor}`}>
                     <Swipeable
                       onSwipedLeft={props.onSwipedLeft}
                       onSwipedRight={props.onSwipedRight}
@@ -244,7 +241,7 @@ class SidebarColophon extends React.Component {
                           >
                             <SidebarArrow
                               visible={!sidebarLargeScreen}
-                              deg={props.show ? 540 : 0}
+                              deg={props.show ? 180 : 0}
                             />
 
                             <h3 className="border-top pt2 onum pnum inline-block mt0 font-weight-600">

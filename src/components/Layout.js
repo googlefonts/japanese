@@ -2,7 +2,7 @@ import React from 'react';
 import data from '../data';
 import dataFonts from '../data/fonts';
 import dataAuthors from '../data/authors';
-import ga from 'react-ga';
+// import ga from 'react-ga';
 import NoScript from '../components/NoScript';
 
 data.fonts = dataFonts;
@@ -18,8 +18,8 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
-    ga.initialize(data.service.analytics);
-    ga.pageview(window.location.pathname.toString());
+    // ga.initialize(data.service.analytics);
+    // ga.pageview(window.location.pathname.toString());
   }
 
   render() {

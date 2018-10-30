@@ -83,7 +83,6 @@ class Index extends React.Component {
 
   setSidebarState(newSidebarState) {
     const self = this;
-    self.refs.sidebar.forceUpdate();
 
     if (self.state.viewport.width < self.props.sidebarMaxWidth) {
       self.setState({
@@ -91,6 +90,10 @@ class Index extends React.Component {
           typeof newSidebarState === 'undefined'
             ? !self.state.sidebar
             : newSidebarState,
+      }, () => {
+        // For Sticky Sidebar
+        // https://github.com/captivationsoftware/react-sticky/issues/231#issuecomment-375685889
+        window.dispatchEvent(new Event('scroll'));
       });
     }
   }
@@ -106,8 +109,7 @@ class Index extends React.Component {
   }
 
   onClickSpecimen() {
-    const self = this;
-    self.setSidebarState();
+    this.setSidebarState(!this.state.sidebar);
   }
 
   handleSpecimenWaypoint(font, opts, e) {
@@ -130,6 +132,7 @@ class Index extends React.Component {
 
   render() {
     const self = this;
+    const state = this.state;
 
     // TODO Switch to map like in footer
     // Not sure how to use imported React elements with this pattern yet
@@ -139,9 +142,8 @@ class Index extends React.Component {
         <Header {...self.props} />
         <SidebarColophon
           {...self.props}
-          ref="sidebar"
-          show={self.state.sidebar}
-          onClickSidebar={self.onClickSpecimen}
+          show={state.sidebar}
+          onClickSidebar={this.onClickSpecimen}
           onSwipedLeft={self.onSwipedLeftSidebar}
           onSwipedRight={self.onSwipedRightSidebar}
           font={self.state.active}
