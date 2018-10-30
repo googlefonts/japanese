@@ -68,13 +68,4 @@ var hjsConfig = getConfig({
 // ]
 // hjsConfig.module.loaders.push(additionalLoaders)
 
-
-// Having hmre present in the .babelrc will break with the `babel-core/register` above
-// so wait until that is done and then add it here via the loader query
-if (process.env.NODE_ENV === 'development') {
-  const babelrc = JSON.parse(fs.readFileSync('./.babelrc'))
-  babelrc.env = {development: {presets: ['react-hmre']}}
-  hjsConfig.module.loaders[0].query = babelrc
-}
-
 module.exports = hjsConfig
