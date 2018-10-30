@@ -1,9 +1,9 @@
 import React from 'react';
 
 class fourOhFour extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     if (window && window.location) {
-      window.location.replace("/");      
+      window.location.replace('/');
     }
   }
   render() {

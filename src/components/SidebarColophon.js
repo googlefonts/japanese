@@ -31,10 +31,15 @@ Blockquote.propTypes = {
 };
 
 const CodeBlockWrapper = (props) => {
-  let cssHref = `https://fonts.googleapis.com/css?family=${props.google_fonts_id.split(' ').join('+')}`;
+  let cssHref = `https://fonts.googleapis.com/css?family=${props.google_fonts_id
+    .split(' ')
+    .join('+')}`;
 
   if (props.earlyAccess === true) {
-    cssHref = `https://fonts.googleapis.com/earlyaccess/${props.google_fonts_id.split(' ').join('').toLowerCase()}.css`;
+    cssHref = `https://fonts.googleapis.com/earlyaccess/${props.google_fonts_id
+      .split(' ')
+      .join('')
+      .toLowerCase()}.css`;
   }
 
   return (
@@ -85,7 +90,8 @@ const SidebarArrow = (props) => {
         style={{
           transform: `rotate(${props.deg}deg)`,
           transition: 'transform 0.5s 0.15s ease-in-out',
-        }}>
+        }}
+      >
         <svg height="24" viewBox="0 0 24 24" width="24">
           <path d="M0 0h24v24H0z" fill="none" />
           <path
@@ -219,26 +225,31 @@ class SidebarColophon extends React.Component {
           <div
             ref="sidebar"
             style={sidebarStyle}
-            className="col-9 md-col-12 right height-100 absolute md-relaitve transition-sidebar">
+            className="col-9 md-col-12 right height-100 absolute md-relaitve transition-sidebar"
+          >
             <Sticky
               style={{zIndex: 10, height: 0}}
-              onClick={props.onClickSidebar}>
+              onClick={props.onClickSidebar}
+            >
               {({style}) => {
                 // bottomOffset could be set to this computed height
                 return (
                   <div style={style} className={`bg-${props.backgroundColor}`}>
                     <Swipeable
                       onSwipedLeft={props.onSwipedLeft}
-                      onSwipedRight={props.onSwipedRight}>
+                      onSwipedRight={props.onSwipedRight}
+                    >
                       <div className="right col-12 md-col-12 ds-sidebar md-ds-none">
                         <div
                           className={`h5 md-h4 animate-bg bg-${
                             props.backgroundColor
                           }`}
-                          style={{height: `100vh`}}>
+                          style={{height: `100vh`}}
+                        >
                           <div
                             className={`p2 md-p3 animate-bg transition-color transition-sidebar ${this.getColorClasses()}}`}
-                            style={{minHeight: `100vh`}}>
+                            style={{minHeight: `100vh`}}
+                          >
                             <SidebarArrow
                               visible={!sidebarLargeScreen}
                               deg={props.show ? 540 : 0}

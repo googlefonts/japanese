@@ -20,7 +20,7 @@ window.app = app.extend({
 
     this.router = new Router();
     this.router.history.start({
-      hashChange: false
+      hashChange: false,
     });
 
     // Specimen

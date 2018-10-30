@@ -7,7 +7,8 @@ const HeaderColumn = (props) => {
   return (
     <div
       className={`col-12 sm-col-6 px1 md-px2 ${props.className}`}
-      lang={props.lang}>
+      lang={props.lang}
+    >
       <div className="h4 md-h3">{props.children}</div>
     </div>
   );
@@ -25,7 +26,7 @@ HeaderColumn.propTypes = {
   headingClassName: PropTypes.string,
   className: PropTypes.string,
   lang: PropTypes.string.isRequired,
-  children: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 const Header = (props) => {
@@ -33,7 +34,8 @@ const Header = (props) => {
   return (
     <div
       className="bg-white black font-family-base relative pb4 bg-white black"
-      style={{zIndex: 100}}>
+      style={{zIndex: 100}}
+    >
       <header className="mx-auto md-max-width-4 lg-max-width-5 mb4 px1 md-px2 lg-px3 pt2 md-pt3 font-weight-500">
         <div className="h4 md-h3 red-small mb1 md-pl1" lang="en">
           {data.name.en}
@@ -58,7 +60,8 @@ const Header = (props) => {
                 href="https://fonts.google.com"
                 title="Google Fonts"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+              >
                 Google Fonts
               </a>{' '}
               は、デザイナー
@@ -78,7 +81,8 @@ const Header = (props) => {
                 href="https://fonts.google.com"
                 title="Google Fonts"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+              >
                 Google Fonts
               </a>{' '}
               provides an intuitive and robust directory of open source designer
