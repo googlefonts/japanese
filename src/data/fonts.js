@@ -10,6 +10,10 @@ module.exports = {
 
 		// Set to `true` to have the font showing in the main listing
 		"published": false,
+		
+		// Set to `true` to load the font automatically. We don’t load
+		// Noto, for example, because it’s already the UI font.
+		"load": false,
 
 		// Set a custom fallback font stack
 		"fallback": "sans-serif",

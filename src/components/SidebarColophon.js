@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {StickyContainer, Sticky} from 'react-sticky';
 import CodeBlock from '../components/CodeBlock';
 import Swipeable from 'react-swipeable';
+import googleFontsEndpoint from '../utils/google-fonts-endpoint'
 
 const Blockquote = (props) => {
   return (
@@ -31,16 +32,7 @@ Blockquote.propTypes = {
 };
 
 const CodeBlockWrapper = (props) => {
-  let cssHref = `https://fonts.googleapis.com/css?family=${props.google_fonts_id
-    .split(' ')
-    .join('+')}`;
-
-  if (props.earlyAccess === true) {
-    cssHref = `https://fonts.googleapis.com/earlyaccess/${props.google_fonts_id
-      .split(' ')
-      .join('')
-      .toLowerCase()}.css`;
-  }
+  let cssHref = googleFontsEndpoint(props.google_fonts_id, { earlyAccess: props.earlyAccess })
 
   return (
     <div className="mxn2 md-mxn3">
