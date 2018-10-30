@@ -112,7 +112,6 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  children: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
 };
 

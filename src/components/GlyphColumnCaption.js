@@ -18,7 +18,7 @@ GlyphColumnCaption.defaultProps = {
 
 GlyphColumnCaption.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default GlyphColumnCaption;

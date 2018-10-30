@@ -21,7 +21,7 @@ CodeBlock.defaultProps = {
 CodeBlock.propTypes = {
   language: PropTypes.string,
   rounded: PropTypes.bool,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default CodeBlock;

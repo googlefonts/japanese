@@ -83,7 +83,7 @@ const FontListItem = (props) => {
                 {props.name.en === props.name.ja ? '' : props.name.en}
               </span>
             </span>
-            <FontListItemDesigner {...props.designer} />
+            {props.designer ? <FontListItemDesigner {...props.designer} /> : null }
           </div>
         </div>
       </a>
@@ -99,26 +99,30 @@ FontListItem.defaultProps = {
   firstColumnLgCol: 5, // TODO This this a quick fix, could be much nicer. Fixes column width on footer
   textAlign: 'left',
   className: '',
+  kanji: false,
+  hiragana: true,
+  katakana: true,
+  earlyAccess: false,
 };
 
 FontListItem.propTypes = {
   name: PropTypes.object.isRequired,
-  font: PropTypes.object.isRequired,
-  designer: PropTypes.object.isRequired,
+  font: PropTypes.string.isRequired,
+  designer: PropTypes.object,
   published: PropTypes.bool,
   color: PropTypes.string.isRequired,
   font_size_adjust: PropTypes.number,
   fontWeight: PropTypes.number.isRequired,
   maxFontSize: PropTypes.number.isRequired,
   minFontSize: PropTypes.number.isRequired,
-  textAlign: PropTypes.oneOf(['left', 'right', 'center']),
+  textAlign: PropTypes.oneOf(['left-align', 'right-align', 'center']),
   className: PropTypes.string,
   firstColumnLgCol: PropTypes.number.isRequired,
 
   earlyAccess: PropTypes.bool.isRequired,
   earlyAccessLabel: PropTypes.object,
 
-  kanji: PropTypes.bool.isRequired,
+  kanji: PropTypes.oneOf([true, false, 'IPA']).isRequired,
   hiragana: PropTypes.bool.isRequired,
   katakana: PropTypes.bool.isRequired,
 };

@@ -73,7 +73,7 @@ CodeBlockWrapper.defaultProps = {
 };
 
 CodeBlockWrapper.propTypes = {
-  font: PropTypes.object.isRequired,
+  font: PropTypes.string.isRequired,
   google_fonts_id: PropTypes.string.isRequired,
   earlyAccess: PropTypes.bool,
   name: PropTypes.object,
