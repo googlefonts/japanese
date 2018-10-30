@@ -51,7 +51,7 @@ const FontListItem = (props) => {
   return (
     <li className={`col-12 m0 ${props.className}`}>
       <a className="block py2 border-none" href={`#${props.font}`}>
-        <div className="flex relative items-center py3 border-top border-muted-light height-fontlist-item">
+        <div className={`flex relative items-center py3 border-top border-muted-light height-fontlist-item ${props.earlyAccess ? 'pr3' : ''}`}>
           {props.earlyAccess === true ? (
             <EarlyAccessFlag label={props.earlyAccessLabel} />
           ) : null}
