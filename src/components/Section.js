@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Section = (props) => {
   return (
     <div
-      className={`notranslate ${props.className}px ${props.basePaddingX} py${
+      className={`notranslate ${props.className} px${props.basePaddingX} py${
         props.basePaddingY
       } sm-py3 md-py4 overflow-hidden ${
         props.verticalCenter === true ? ' flex items-stretch ' : ''
