@@ -4,7 +4,11 @@ import FitterHappierText from '../vendor/react-fitter-happier-text';
 
 const GlyphColumn = (props) => {
   return (
-    <div className={`${props.className} font-weight-${props.fontWeight}`}>
+    <div
+      className={`notranslate ${props.className} font-weight-${
+        props.fontWeight
+      }`}
+    >
       <FitterHappierText text={props.value} />
     </div>
   );
