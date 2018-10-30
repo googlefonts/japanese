@@ -44,8 +44,6 @@ class FitterHappierText extends React.Component {
   }
 
   render () {
-    return this.props.text
-
     let styles = {
       svg: {
         width: '100%',
