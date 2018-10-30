@@ -34,17 +34,18 @@ const FontListItem = (props) => {
       : 1 / props.font_size_adjust;
 
   let textString = ['安', 'あ', 'ア'];
+  let keyStr = `GlyphHidden_${props.font}`;
 
   if (props.kanji !== true) {
-    textString[0] = <GlyphHidden text={textString[0]} />;
+    textString[0] = <GlyphHidden key={`${keyStr}_0`} text={textString[0]} />;
   }
 
   if (props.hiragana !== true) {
-    textString[1] = <GlyphHidden text={textString[1]} />;
+    textString[1] = <GlyphHidden key={`${keyStr}_1`} text={textString[1]} />;
   }
 
   if (props.katakana !== true) {
-    textString[2] = <GlyphHidden text={textString[2]} />;
+    textString[2] = <GlyphHidden key={`${keyStr}_2`} text={textString[2]} />;
   }
 
   return (
@@ -138,14 +139,14 @@ class FontList extends React.Component {
       textAlign = `${props.textAlignment}-align`;
     }
 
-    let typefaceList = Object.keys(data.fonts).map(function(index) {
+    let typefaceList = Object.keys(data.fonts).map(function(key, index) {
       return (
         <FontListItem
-          key={`header_${index}`}
-          font={index}
+          key={`FontList_${key}_${index}`}
+          font={key}
           textAlign={textAlign}
           {...props}
-          {...data.fonts[index]}
+          {...data.fonts[key]}
         />
       );
     });
