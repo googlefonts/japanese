@@ -3,7 +3,7 @@ import app from 'ampersand-app';
 import {loadCSS} from 'fg-loadcss';
 import data from './data';
 import Router from './router';
-import googleFontsEndpoint from './utils/google-fonts-endpoint'
+import googleFontsEndpoint from './utils/google-fonts-endpoint';
 
 // CSS
 require('./css/index.scss');
@@ -28,7 +28,9 @@ window.app = app.extend({
     Object.keys(data.fonts).map(function(index) {
       let font = data.fonts[index];
       if (font.load !== false) {
-        let url = googleFontsEndpoint(font.google_fonts_id, { earlyAccess: font.earlyAccess })
+        let url = googleFontsEndpoint(font.google_fonts_id, {
+          earlyAccess: font.earlyAccess,
+        });
         loadCSS(url);
       }
     });

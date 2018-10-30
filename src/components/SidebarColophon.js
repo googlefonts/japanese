@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {StickyContainer, Sticky} from 'react-sticky';
 import CodeBlock from '../components/CodeBlock';
 import Swipeable from 'react-swipeable';
-import googleFontsEndpoint from '../utils/google-fonts-endpoint'
+import googleFontsEndpoint from '../utils/google-fonts-endpoint';
 
 const Blockquote = (props) => {
   return (
@@ -32,7 +32,7 @@ Blockquote.propTypes = {
 };
 
 const CodeBlockWrapper = (props) => {
-  let cssHref = googleFontsEndpoint(props.google_fonts_id, { earlyAccess: props.earlyAccess })
+  let cssHref = googleFontsEndpoint(props.google_fonts_id, {earlyAccess: props.earlyAccess});
 
   return (
     <div className="mxn2 md-mxn3">
