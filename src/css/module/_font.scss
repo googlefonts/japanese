@@ -7,18 +7,16 @@
 // Specify the style of the typeface
 // to use via `font-weight` utility classes.
 //
-// Markup:
-// <div class="font-weight-400">
-//   <div class="h1 font-weight-100">Ultralight</div>
-//   <p>We’re on an Ultralight Beam.</p>
-// </div>
-//
 // No styleguide reference.
-@for $i from 1 through 9 {
-  .font-weight-#{ $i }00 {
-    font-weight: #{ $i }00;
-  }
-}
+.font-weight-100 { font-weight: 100; }
+.font-weight-200 { font-weight: 200; }
+.font-weight-300 { font-weight: 300; }
+.font-weight-400 { font-weight: 400; }
+.font-weight-500 { font-weight: 500; }
+.font-weight-600 { font-weight: 600; }
+.font-weight-700 { font-weight: 700; }
+.font-weight-800 { font-weight: 800; }
+.font-weight-900 { font-weight: 900; }
 
 .font-weight-inherit {
   font-weight: inherit;
