@@ -39,7 +39,7 @@ class SpecimenMPlus extends React.Component {
             <div className="flex-auto pl2">Regular</div>
             <div className="flex-auto pl2">Medium</div>
             <div className="flex-auto pl2">Bold</div>
-            <div className="flex-auto pl2">Extra Bold</div>
+            <div className="flex-auto pl2">Extra&nbsp;Bold</div>
             <div className="flex-auto pl2">Black</div>
           </GlyphColumnCaption>
 
@@ -73,7 +73,7 @@ class SpecimenMPlus extends React.Component {
             <div className="flex-auto pl2">Regular</div>
             <div className="flex-auto pl2">Medium</div>
             <div className="flex-auto pl2">Bold</div>
-            <div className="flex-auto pl2">Extra Bold</div>
+            <div className="flex-auto pl2">Extra&nbsp;Bold</div>
             <div className="flex-auto pl2">Black</div>
           </GlyphColumnCaption>
 
