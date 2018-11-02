@@ -4,6 +4,7 @@ import {loadCSS} from 'fg-loadcss';
 import data from './data';
 import Router from './router';
 import googleFontsEndpoint from './utils/google-fonts-endpoint';
+import basePath from './utils/base-path';
 
 // CSS
 require('./css/index.scss');
@@ -22,6 +23,7 @@ window.app = app.extend({
     this.router = new Router();
     this.router.history.start({
       hashChange: false,
+      root: `${basePath}/`,
     });
 
     // Specimen

@@ -94,7 +94,8 @@
     },
     "globals": {
       "module": true,
-      "require": true
+      "require": true,
+      "process": true
     }
   },
   "scripts": {

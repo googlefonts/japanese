@@ -62,6 +62,6 @@ export default Router.extend({
     return this.renderPage(<Index />);
   },
   fourOhFour: function() {
-    return this.redirectTo("");
+    return this.redirectTo(`/`);
   }
 });
