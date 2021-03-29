@@ -28,7 +28,7 @@ class Footer extends React.Component {
               <ul className="list-style-none p0 m0" lang="en">
                 <li>
                   <a
-                    href={`${data.repository}/blob/master/CONTRIBUTING.md`}
+                    href={`${data.repository}/blob/main/CONTRIBUTING.md`}
                     aria-label="Read more about contributing to this open source site.">
                     Contribute
                   </a>
