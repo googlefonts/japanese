@@ -126,7 +126,7 @@ module.exports = {
 		},
 		"description": {
 			"ja": false,
-			"en": "Hannari, from typingart, is an original Kana design inspired by a historical design, Tsukiji. The Kana have a soft and gentle appearence that is elegant and dynamic. It is well balanced classical deign, with a feminine touch. A classic design."
+			"en": "Hannari, from typingart, is an original Kana design inspired by a historical design, Tsukiji. The Kana have a soft and gentle appearence that is elegant and dynamic. It is well balanced classical design, with a feminine touch. A classic design."
 		},
 		"designer": {
 			"url": "https://twitter.com/typingart",
