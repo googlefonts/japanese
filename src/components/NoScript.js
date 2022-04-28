@@ -22,7 +22,7 @@ class NoScript extends React.Component {
       }
     });
 
-    // https://git.io/vPtBU
+    // https://github.com/facebook/react/issues/1252
     return (
       <noscript
         dangerouslySetInnerHTML={{
