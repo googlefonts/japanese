@@ -23,7 +23,7 @@
     "es6-shim": "0.35.0",
     "fg-loadcss": "1.2.0",
     "fontfaceobserver": "2.0.1",
-    "immutable": "3.8.1",
+    "immutable": "4.3.8",
     "lodash.debounce": "4.0.8",
     "lodash.throttle": "4.1.1",
     "normalize.css": "4.2.0",
